@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worklife Balance</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/facivon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon_192.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+</head>
+<body>
+
+    <main>
+        <header class="main-header">
+            <img src="assets/logotipo.svg" alt="Logotipo Worklife Balance" class="logotipo">
+            <img src="assets/claim.svg" alt="Claim Worklife Balance" class="claim">
+        </header>
+        <div class="contract-section">
+            <p>Work-related stress impacts both your well-being and performance. With our innovative <span>Separation Process,</span> you can now live free from that burden: at work, you’ll be 100% focused; outside, you’ll enjoy life without worries. Sign below to access a balanced and optimized life</p>
+            <section class="contract-interactive">
+                <p>Sign our</p>
+                <div id="contract-animation" style="width: 100px; height: 100px;"></div>
+                <p>contract</p>
+            </section>
+            <button class="group-button know-more">
+                <div class="button">Know more</div>
+                <div class="icon">
+                    <img src="assets/close.svg" alt="Close Icon">
+                </div>
+            </button>
+        </div>
+    </main>
+    <!-- Modal -->
+    <div id="contract-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">
+                <img src="assets/close.svg" alt="Close Icon">
+            </span>
+            <img src="assets/isotipo.svg" alt="Isotipo Worklife Balance" class="modal-logo">
+            <h1>Separate employee contract</h1>
+            <h2 class="subrayado">DISCOVER A NEW BALANCE | DISCOVER A NEW LIFE</h2>
+            <p>At WorkLife Balance, we believe in a future where work and personal life can coexist in perfect harmony. Thanks to our advancements in neuroscience and cognitive technology, we have developed the <span>Separation Process,</span> a revolutionary method that allows you to compartmentalize your life and reach your full potential.</p>
+            <p>Imagine a world where work stress never follows you home. Where personal worries never affect your performance in the office. With our innovative solution, your Work Self and Personal Self will exist in complete independence, allowing you to enjoy the best of both worlds.</p>
+            <h3 class="subrayado">How It Works</h3>
+            <div class="flex-row">
+                <p class="left destacado">No distractions.<br>No anxiety.<br>No interference.</p>
+                <p class="right">Through a safe and certified procedure, your memory is adjusted to ensure that when you step into your workplace, you focus entirely on what truly matters: productivity. At the end of the day, your consciousness returns to your personal life, free from deadlines, stress, or unfinished tasks.</p>
+            </div>
+            <h3 class="subrayado">The Benefits of Separation</h3>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <p class="destacado">Maximum efficiency.</p>
+                    <p>Without external distractions, your performance reaches new heights.</p>
+                </div>
+                <div class="benefit">
+                    <p class="destacado">Accelerated professional growth.</p>
+                    <p>A focused employee is a successful employee.</p>
+                </div>
+                <div class="benefit">
+                    <p class="destacado">Stress-free personal life.</p>
+                    <p>Enjoy your free time without the emotional weight of work.</p>
+                </div>
+                <div class="benefit">
+                    <p class="destacado">Guaranteed well-being.</p>
+                    <p>Say goodbye to burnout and embrace a truly balanced life.</p>
+                </div>
+            </div>
+            <p class="italic">At WorkLife Balance, we are redefining what it means to be human in the modern world. You are one step away from a new way of living, working, and evolving.</p>
+            <p class="green-dark"><span>Sign your contract today and join the next revolution in corporate well-being.</span></p>
+
+            <button class="group-button continue-arrow sign-in">
+                <div class="button">Sign in</div>
+                <div class="icon">
+                    <img src="assets/Arrow.svg" alt="Close Icon">
+                    <img src="assets/Arrow.svg" alt="Close Icon">
+                </div>
+            </button>
+        </div>
+    </div>
+    <!-- Modal -->
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/TextPlugin.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

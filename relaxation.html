@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WB_Relaxation</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/facivon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon_192.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/relaxation.css">
+</head>
+<body>
+    <div class="relaxation-container">
+        <!-- Back button -->
+        <div class="back-page">
+            <img class="back-icon" src="assets/Arrow.svg" alt="Back Arrow">
+            <a href="platform.html" class="back-link">Back to the panel</a>
+        </div>
+
+        <!-- Audio Control -->
+        <div class="audio-control">
+            <span class="audio-text">Ambient sound</span>
+            <button class="sound-toggle">
+                <img src="assets/sound_on.svg" alt="Toggle sound" class="sound-icon">
+                <img src="assets/sound_off.svg" alt="Toggle sound" class="sound-off">
+            </button>
+            <audio id="ambient-music" loop>
+                <source src="assets/Ambient_relaxation.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="click-sound">
+                <source src="assets/clic.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Orbital system background -->
+        <div class="orbital-system">
+            <div class="center-circle"></div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <div class="orbit orbit-4"></div>
+        </div>
+
+        <!-- Header section -->
+        <div class="relaxation-header">
+            <div class="header-content">
+                <div class="icon">
+                    <img src="assets/relax_area.svg" alt="Relaxation icon">
+                </div>
+                <h2 class="green-light">Let your inner self grow</h2>
+                <h1>Relaxation & motivation area</h1>
+            </div>
+        </div>
+
+        <!-- Interactive circles section -->
+        <div class="circles-container">
+            <button class="circle-button happiness" data-message="Your outie appreciates you and wants you to be happy within the company.">
+                <div class="open-symbol">
+                    <div class="open-symbol-line"></div>
+                    <div class="open-symbol-line"></div>
+                </div>
+                <div class="circle"></div>
+                <div class="team-label">Happiness</div>
+            </button>
+            <button class="circle-button hobby" data-message="Your outie enjoys making crafts, it relaxes him and helps him connect with himself.">
+                <div class="open-symbol">
+                    <div class="open-symbol-line"></div>
+                    <div class="open-symbol-line"></div>
+                </div>
+                <div class="circle"></div>
+                <div class="team-label">Hobbies</div>
+            </button>
+            <button class="circle-button behaviour" data-message="Your outie finds peace in nature, likes to enjoy the experience with his friends. ">
+                <div class="open-symbol">
+                    <div class="open-symbol-line"></div>
+                    <div class="open-symbol-line"></div>
+                </div>
+                <div class="circle"></div>
+                <div class="team-label">Behaviour</div>
+            </button>
+            <button class="circle-button social" data-message="Your outie has many friends and likes to have them in her life. ">
+                <div class="open-symbol">
+                    <div class="open-symbol-line"></div>
+                    <div class="open-symbol-line"></div>
+                </div>
+                <div class="circle"></div>
+                <div class="team-label">Social Context</div>
+            </button>
+            <button class="circle-button sentimental" data-message="Your outie is open and open to others, he knows it is important for his well-being.">
+                <div class="open-symbol">
+                    <div class="open-symbol-line"></div>
+                    <div class="open-symbol-line"></div>
+                </div>
+                <div class="circle"></div>
+                <div class="team-label">Outie Feelings</div>
+            </button>
+        </div>
+
+        <!-- Message display -->
+        <div class="message-display">
+            <p class="message"></p>
+        </div>
+    </div>
+
+    <!-- Contenedor para la animación Lottie -->
+    <div id="lottie-door"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/TextPlugin.min.js"></script>
+    <script src="js/relaxation.js"></script>
+</body>
+</html> 

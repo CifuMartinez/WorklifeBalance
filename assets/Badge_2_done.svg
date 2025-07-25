@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Pantallas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_27);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_27" data-name="Degradado sin nombre 27" x1=".41" y1="14.94" x2="29.59" y2="14.94" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffcac0"/>
+      <stop offset=".33" stop-color="#f3b8ac"/>
+      <stop offset=".71" stop-color="#e8a89b"/>
+      <stop offset="1" stop-color="#e5a395"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points="19.86 19.8 19.86 10.07 10.14 10.07 10.14 .35 .41 .35 .41 29.53 10.14 29.53 19.86 29.53 29.59 29.53 29.59 19.8 19.86 19.8"/>
+</svg>

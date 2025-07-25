@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Matching Program</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/task.css">
+    <link rel="stylesheet" href="../css/task_05.css">
+</head>
+<body>
+    <main class="task-content">
+        <div class="task-close-container">
+            <svg class="task-close" id="Pantallas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.02 14.02"><defs><style>.cls-1{fill:var(--green-light);}</style></defs><path class="cls-1" d="M12.81.32h-.89v.89h-.89v.89h-.89v.89h-.89v.89h-.89v.89h-.89v.89h-.89v-.89h-.89v-.89h-.89v-.89h-.89v-.89h-.89V.32h-.89v.89H.32v.89h.89v.89h.89v.89h.89v.89h.89v.89h.89v.89h.89v.89h-.89v.89h-.89v.89h-.89v.89h-.89v.89h-.89v.89H.32v.89h.89v.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v.89h.89v.89h.89v.89h.89v.89h.89v.89h.89v.89h.89v-.89h.89v-.89h-.89v-.89h-.89v-.89h-.89v-.89h-.89v-.89h-.89v-.89h-.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h.89v-.89h-.89V.32Z"/></svg>
+        </div>
+        <header class="task-header">
+            <h3 class="task-title">Symbol Matching Program</h3>
+            <div class="task-progress-logo">
+                <svg class="task-logo" id="Material_Referencias" data-name="Material &amp; Referencias" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.04 89.17">
+                    <defs>
+                        <style>.cls-1 { fill: var(--green-light); }</style>
+                    </defs>
+                    <g>
+                        <path class="cls-1" d="M14.06,44.59c0,20.26,22.12,36.66,49.43,36.66v2.3H6.41V5.62h57.07v2.26c-27.31,0-49.43,16.44-49.43,36.7Z"/>
+                        <path class="cls-1" d="M126.63,5.62v77.93h-57.11v-2.3c27.31,0,49.46-16.4,49.46-36.66S96.83,7.89,69.52,7.89v-2.26h57.11Z"/>
+                    </g>
+                    <g>
+                        <path class="cls-1" d="M30.74,31.11h9.81l1.64,7.39,1.63,7.43,2.23-7.43,2.19-7.39h8.58l2.19,7.39,2.23,7.51,1.64-7.51,1.67-7.39h9.44l-6.95,26.01h-10.48l-2.12-7.17-2.08-7.28-2.12,7.28-2.12,7.17h-10.44l-6.95-26.01Z"/>
+                        <path class="cls-1" d="M75.26,31.11h10.92v19.4h16.53v6.61h-27.46v-26.01Z"/>
+                    </g>
+                    <path class="cls-1" d="M97.62,33.16c0-1.21.76-2.14,1.96-2.14,1.01,0,1.6.6,1.69,1.38h-.82c-.07-.41-.38-.68-.86-.68-.76,0-1.12.63-1.12,1.44s.44,1.44,1.12,1.44c.49,0,.83-.29.88-.72h.81c-.02.36-.18.71-.45.97-.28.26-.68.44-1.24.44-1.15,0-1.97-.89-1.97-2.12Z"/>
+                    <g>
+                        <path class="cls-1" d="M99.45,36.35c-1.8,0-3.27-1.47-3.27-3.27s1.47-3.27,3.27-3.27,3.27,1.47,3.27,3.27-1.47,3.27-3.27,3.27ZM99.45,30.13c-1.63,0-2.95,1.32-2.95,2.95s1.32,2.95,2.95,2.95,2.95-1.32,2.95-2.95-1.32-2.95-2.95-2.95Z"/>
+                        <path class="cls-1" d="M99.45,36.45c-1.85,0-3.36-1.51-3.36-3.36s1.51-3.36,3.36-3.36,3.36,1.51,3.36,3.36-1.51,3.36-3.36,3.36ZM99.45,29.91c-1.75,0-3.18,1.42-3.18,3.18s1.42,3.18,3.18,3.18,3.18-1.42,3.18-3.18-1.42-3.18-3.18-3.18ZM99.45,36.13c-1.68,0-3.04-1.37-3.04-3.04s1.37-3.04,3.04-3.04,3.04,1.37,3.04,3.04-1.37,3.04-3.04,3.04ZM99.45,30.23c-1.58,0-2.86,1.28-2.86,2.86s1.28,2.86,2.86,2.86,2.86-1.28,2.86-2.86-1.28-2.86-2.86-2.86Z"/>
+                    </g>
+                </svg>
+            </div>
+        </header>
+        <button class="group-button question">
+            <div class="button">How to perform the task?</div>
+            <div class="icon">
+                <img src="../assets/close.svg" alt="Close Icon">
+            </div>
+        </button>
+        <section class="ruleta-task">
+            <div class="ruleta-columns">
+                <div class="ruleta-col">
+                    <button class="arrow-btn up" data-col="0"><img src="../assets/arrow.svg" alt="Arriba" style="transform:rotate(180deg)"></button>
+                    <ul class="icon-list" data-col="0"></ul>
+                    <button class="arrow-btn down" data-col="0"><img src="../assets/arrow.svg" alt="Abajo"></button>
+                </div>
+                <div class="ruleta-col">
+                    <button class="arrow-btn up" data-col="1"><img src="../assets/arrow.svg" alt="Arriba" style="transform:rotate(180deg)"></button>
+                    <ul class="icon-list" data-col="1"></ul>
+                    <button class="arrow-btn down" data-col="1"><img src="../assets/arrow.svg" alt="Abajo"></button>
+                </div>
+                <div class="ruleta-col">
+                    <button class="arrow-btn up" data-col="2"><img src="../assets/arrow.svg" alt="Arriba" style="transform:rotate(180deg)"></button>
+                    <ul class="icon-list" data-col="2"></ul>
+                    <button class="arrow-btn down" data-col="2"><img src="../assets/arrow.svg" alt="Abajo"></button>
+                </div>
+            </div>
+            <div class="ruleta-hints">
+                <div class="ruleta-progress"></div>
+                <div class="ruleta-hint-message"></div>
+            </div>
+        </section>
+    </main>
+    <div class="description-overlay"></div>
+    <div class="description-popup">
+        <p class="close-popup">x</p>
+        <p class="destacado description-popup-title">Symbol Matching Program</p>
+        <p class="description-popup-text">Identify the three visual symbols that, when properly combined, form the foundation of Worklife Balance thinking. Select correctly to reveal the final output.</p>
+        <p class="italic description-popup-text">Each combination contains embedded guidance below to help you find the correct pair.</p>
+    </div>
+    <script src="../js/task.js"></script>
+    <script src="../js/task_05.js"></script>
+</body>
+</html> 

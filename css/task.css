@@ -1,0 +1,266 @@
+/* --- TASK COMMON STYLES --- */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.task-content {
+    border: 1px solid var(--green-light);
+    border-radius: 12px;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+    display: block;
+    opacity: 0;
+}
+
+.task-content.fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.task-content.fade-out {
+    animation: fadeOut 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ESTILOS BOTÓN CERRAR */
+.task-close-container{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--dark);
+    border-radius: 50%;
+    border: 1px solid var(--green-light);
+    transform: scale(1);
+    transition: transform 0.2s ease-in;
+}
+
+.task-close.cls-1{
+    fill: var(--green-light);
+    transition: fill 0.2s ease-in-out;
+}
+.task-close {  
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-out;
+}
+.task-close-container:hover{
+    background: var(--green-light);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0 rgba(128, 192, 128, 0.5);
+}
+.task-close-container:hover .task-close{
+    transform: rotate(180deg);
+}
+
+.task-close-container:hover .cls-1 {
+    fill: var(--dark);
+    transition: fill 0.2s ease-in-out;
+}
+
+.task-close:hover{
+    fill: var(--dark);
+}
+
+/* ESTILOS HEADER */
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 2rem;
+    border-bottom: 1px solid var(--green-light);
+    margin-bottom: 0;
+}
+.task-title { 
+    margin:0;
+    color: var(--green-light);
+    text-align: left;
+}
+
+.task-progress-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+.task-logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+/*ESTILOS QUESTION */
+.group-button.question{
+    margin-top: 0.1rem;
+}
+
+.question .button{
+    padding-left: 2rem;
+}
+
+button:hover{
+   transform: scale(1);
+}
+
+/* ESTILOS DESCRIPTION POPUP */
+.description-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    background: var(--dark);
+    border: 1px solid var(--green-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 650px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.description-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+    padding-inline:4rem;
+}
+
+.description-popup .close-popup{
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    font-size: 1rem;
+}
+.description-popup-title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p.destacado.description-popup-title{
+    font-weight: 600;
+}
+.description-popup-text {
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* Overlay para el fondo oscuro */
+.description-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.description-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.asociaciones-svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 1024px){
+    .description-popup.active {
+        padding-inline:2rem;
+    }
+}
+
+/* ESTILOS RESPONSIVE */
+@media (max-width: 700px) {
+    .task-content {
+        min-width: 90vw;
+    }
+    .task-header {
+        padding: 0.25rem 1rem;
+    }
+   .task-close-container{
+    width: 1.5rem;
+    height: 1.5rem;
+   }
+   .task-close{
+    width: 0.75rem;
+    height: 0.75rem;
+   }
+   .description-popup{
+    width: 60vw;
+   }
+   
+   .question .button{
+    padding-left: 1rem;
+}
+   
+}
+
+@media (max-width: 560px) {
+    main{
+        padding-top: 1rem;
+    }
+    .task-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+.task-logo{
+    width: 3rem;
+    height: 3rem;
+   }
+.question .button{
+    padding-left: 1rem;
+}
+.description-popup{
+    width: 70vw;
+   }
+   
+}
+
+@media (max-width: 400px) {
+    .task-title{
+        font-size:18px;
+    }
+}

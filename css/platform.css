@@ -1,0 +1,643 @@
+.platform-page {
+    background-color: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+.platform-container {
+    padding:3rem;
+    justify-content: space-between;
+    max-width: 2000px;
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+h3.time{
+    margin-top:0;
+}
+
+
+/*MOOD STATES*/
+.mood-states {
+    display: flex;
+    gap: 1rem;
+}
+
+.mood-state {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--green-light);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    h2{
+        margin:0;
+    }
+}
+
+.mood-state:hover{
+    background-color: var(--green-light);
+    color: var(--dark);
+    transform: scale(1.1);
+
+    .mood-state-icon{
+        background-color: var(--dark);
+    }
+}
+
+
+.mood-state .excelent{
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+}
+
+
+.mood-state .excelent .mood-state-icon{
+    border: 1px solid var(--dark);
+}
+
+.mood-state:hover .mood-state-icon{
+    border: 1px solid var(--green-light);
+}
+
+.mood-state-icon:nth-child(2){
+   transform:translateX(-0.5rem);
+   transition: all 0.5s ease;
+}
+
+.mood-state:hover .mood-state-icon:nth-child(2){
+    transform: translateX(-0.7rem);
+}
+.mood-state-icon {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--green-light);
+    border-radius: 50%;
+}
+
+.mood-state.unmotivated .mood-state-icon {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--green-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border 0.2s ease-in-out;
+    
+}
+
+.mood-state.unmotivated .inner-icon {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--green-light);
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    transform: translateY(0.35rem);
+    transition: all 0.5s ease;
+}
+
+
+.mood-state.unmotivated:hover .inner-icon{
+    transform: translateY(0);
+    border:none;
+}
+
+.mood-state.unmotivated:hover .mood-state-icon{
+    border: 1.5px solid var(--dark);
+}
+
+/*TOOLTIP*/
+
+.tooltip {
+    position: fixed;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--green-light);
+    max-width: 240px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-title {
+    display: block;
+    color: var(--green-light);
+    font-size: 1.1rem;
+    font-weight:600;
+    margin-bottom: 0.25rem;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+.head-container-right {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#clock-animation {
+    width: 5rem;
+    height: 5rem;
+}
+
+.mobile-clock{
+    display: none;
+}
+
+/*BOXES*/
+.platform-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: left;
+}
+
+.platform-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+
+.platform-boxes:hover .platform-box {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.platform-boxes .platform-box:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+h1.caja {
+    margin: 0;
+    max-width: 250px;
+}
+
+.box-description {
+    margin-top: 0.5rem;
+    max-width: 235px;
+}
+
+.box-button {
+    background: rgba(152, 251, 152, 0.2);
+    color: var(--green-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box-button:hover {
+    background: rgba(152, 251, 152, 0.3);
+}
+
+
+
+.box-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.progress-percentage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.progress-percentage-number {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--green-light);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--green-light);
+    transition: width 0.5s ease-in-out;
+}
+
+button{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+/* Estado hover del botón excellent -> Work Box */
+.mood-state:has(.excelent):hover ~ .platform-boxes .breathe-box,
+.mood-state:has(.excelent):hover ~ .platform-boxes .inspiration-box {
+    opacity: 0.2;
+}
+
+.mood-state:has(.excelent):hover ~ .platform-boxes .work-box {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Estado hover del botón good -> Inspiration Box */
+.mood-state:has(.good):hover ~ .platform-boxes .breathe-box,
+.mood-state:has(.good):hover ~ .platform-boxes .work-box {
+    opacity: 0.2;
+}
+
+.mood-state:has(.good):hover ~ .platform-boxes .inspiration-box {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Estado hover del botón unmotivated -> Breathe Box */
+.mood-state.unmotivated:hover ~ .platform-boxes .work-box,
+.mood-state.unmotivated:hover ~ .platform-boxes .inspiration-box {
+    opacity: 0.2;
+}
+
+.mood-state.unmotivated:hover ~ .platform-boxes .breathe-box {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Ocultar el layout responsive por defecto */
+.breathe-box .responsive-layout {
+    display: none;
+}
+
+
+/* Ajustes específicos para pantallas medianas */
+@media (max-width: 1024px) {
+    
+    h1.gran-titular{
+        font-size: 46px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    .gran-titular{
+        line-height: 0.25;
+    }
+    .mood-state{
+        padding: 0.5rem 0.75rem;
+    }
+    .mood-state-icon{
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+    .head-container-right{
+        gap: 0;
+    }
+    h3.time{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    #clock-animation{
+        width: 10vw;
+        height: auto;
+    }
+
+    .platform-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .platform-box{
+        gap: 0.5rem;
+    }
+    .platform-box.breathe-box {
+        grid-column: 1 / -1;
+        gap: 0;
+        max-width: none;
+    }
+
+    .platform-box.work-box,
+    .platform-box.inspiration-box {
+        max-width: none;
+    }
+
+    .platform-container {
+        padding: 2rem;
+    }
+
+    h1.caja{
+        font-size: 22px;
+    }
+
+    .box-description{
+        font-size: 16px;
+    }
+    button.caja{
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    /* Ocultar elementos del layout original */
+    .breathe-box > h1.caja,
+    .breathe-box > p.box-description,
+    .breathe-box > button.box-button,
+    .breathe-box > .box-icon {
+        display: none;
+    }
+    .breathe-box .responsive-layout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .breathe-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .responsive-layout button{
+        margin-top: 0;
+    }
+    .responsive-layout h1.caja{
+        max-width: 100%;
+    }
+   
+    .breathe-box .breathe-content button.box-button {
+        align-self: flex-start; /* Alinea el botón al inicio */
+    }
+}
+
+
+
+/* AJUSTES PARA MÓVILES */
+@media (max-width: 640px) {
+    main{
+        width: 80%;
+    }
+
+    h1.gran-titular{
+        font-size: 8vw;
+        text-align: left;
+    }
+    .mood-state{
+        padding: 0.25rem 0.5rem;
+    }
+
+    /*Ocultar reloj de pantallas grande y responsive y mostrar reloj de móvil*/
+
+    /* Ocultar estructura original */
+    .head-container .head-container-right {
+        display: none;
+    }
+
+    /* Mostrar y estilizar versión móvil */
+    .mobile-clock {
+        display: flex;
+        width: 100%;
+    }
+
+    .mobile-clock .head-container-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+   #clock-animation-mobile {
+        width: 12vw;
+        height: auto;
+    }
+
+    /*Ocultar estructura original breathe box*/
+    .breathe-box .responsive-layout {
+        display: none;
+    }
+    /*Mostrar estructura móvil breathe box*/
+    .breathe-box > h1.caja,
+    .breathe-box > .box-description,
+    .breathe-box > .box-button,
+    .breathe-box > .box-icon {
+        display: flex;
+    }
+
+    .platform-boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .platform-box {
+        position: relative;
+        border-radius: 16px;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /* Reordenamos los elementos */
+    .platform-box .box-icon,
+    .platform-box .progress-percentage {
+        order: -1; /* Mueve estos elementos al principio */
+        margin-bottom: 0.5rem; /* Espacio después del icono */
+    }
+
+    /* Ajustes para los iconos */
+    .box-icon img {
+        width: 10vw;
+        height: auto;
+    }
+
+    h3.progress-percentage-number{
+        font-size: 22px;
+    }
+    .progress-bar {
+        width: 160px;
+        height: 4px;
+    }
+
+    /* Ajustes para el título */
+    h1.caja {
+        font-size: 18px;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    /* Contenido */
+    .box-description {
+        display: none;
+        font-size: 16px;
+    }
+
+    .box-button {
+        margin-top: 1rem;
+        display: none;
+    }
+
+    /* Toggle icon */
+    .toggle-icon{
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:var(--dark);
+        padding: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+    }
+    .toggle-icon img{
+        width: 18px;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Estado expandido */
+    .platform-box.expanded .toggle-icon img{
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Keyframes para las animaciones */
+    @keyframes collapseBox {
+        0% {
+            min-height: 200px;
+            opacity: 1;
+        }
+        100% {
+            min-height: 100px;
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes expandBox {
+        0% {
+            min-height: 100px;
+            opacity: 0.8;
+        }
+        100% {
+            min-height: 200px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /*ESTADOS PARA MÓVIL DE PLATFORM BOX*/
+    /* Estado por defecto (colapsado) */
+    .platform-box .box-description,
+    .platform-box .box-button {
+        display: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Estado expandido */
+    .platform-box.expanded .box-description,
+    .platform-box.expanded .box-button {
+        display: block;
+        animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    /* Ajuste de altura para boxes colapsados */
+    .platform-box:not(.expanded) {
+        min-height: 100px;
+        animation: collapseBox 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .platform-box.expanded {
+        min-height: 200px;
+        animation: expandBox 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    /* Ajuste para el toggle icon */
+    .toggle-icon img {
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .platform-box.expanded .toggle-icon img {
+        transform: rotate(180deg);
+    }
+
+    /* Clase para animar el cierre */
+    .platform-box.closing {
+        animation: collapseBox 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .platform-box.closing .box-description,
+    .platform-box.closing .box-button {
+        animation: slideOut 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    /* Transiciones suaves solo para descripción y botón */
+    .platform-box:not(.expanded) .box-description,
+    .platform-box:not(.expanded) .box-button {
+        opacity: 0;
+    }
+
+    .platform-box.expanded .box-description,
+    .platform-box.expanded .box-button {
+        opacity: 1;
+    }
+}
+
+
+
+

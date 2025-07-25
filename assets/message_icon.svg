@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Material_Referencias" data-name="Material &amp;amp; Referencias" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.5 56.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #92d178;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M62.5,6.54v31.25h-6.25V6.54s6.25,0,6.25,0ZM37.5,44.04v6.25h6.25v-6.25h12.5v-6.25h-18.75v6.25M31.25,56.53h6.25v-6.25h-6.25v6.25ZM25,50.28h6.25v-6.25h-6.25s0,6.25,0,6.25ZM6.25,37.78v6.25h18.75s0-6.25,0-6.25H6.25ZM6.25,12.79v-6.25H0v31.25h6.25V12.79M6.25.29v6.25h50V.29H6.25Z"/>
+</svg>

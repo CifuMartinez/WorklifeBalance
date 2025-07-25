@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Pantallas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_56);
+      }
+    </style>
+    <radialGradient id="Degradado_sin_nombre_56" data-name="Degradado sin nombre 56" cx="15" cy="15" fx="15" fy="15" r="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d186b7"/>
+      <stop offset=".25" stop-color="#c577a8"/>
+      <stop offset=".71" stop-color="#b36192"/>
+      <stop offset="1" stop-color="#ad598b"/>
+    </radialGradient>
+  </defs>
+  <path class="cls-1" d="M22.84,15c14.48,12.33,4.48,22.32-7.84,7.84-12.33,14.48-22.32,4.48-7.84-7.84C-7.32,2.67,2.67-7.32,15,7.16c12.33-14.48,22.32-4.48,7.84,7.84Z"/>
+</svg>

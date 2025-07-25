@@ -1,0 +1,207 @@
+.classifier-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  margin-top: 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.classifier-task::before,
+.classifier-task::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  height: 4.5em;
+  pointer-events: none;
+  z-index: 2;
+}
+.classifier-task::before {
+  top: 0;
+  background: linear-gradient(to bottom, #000 0%, transparent 100%);
+}
+.classifier-task::after {
+  bottom: 0;
+  background: linear-gradient(to top, #000 0%, transparent 100%);
+}
+.classifier-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  min-height: unset;
+}
+.classifier-title {
+  color: var(--white);
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: 500;
+  min-width: 220px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.classifier-list-container {
+  width: 100%;
+  max-width: 330px;
+  height: 2.5em;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  position: relative;
+}
+.classifier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 0.5s cubic-bezier(.7,.2,.2,1);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 2.5em;
+}
+.classifier-word {
+  font-size: 1.8rem;
+  color: var(--green-light);
+  opacity: 0.25;
+  text-align: left;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+.classifier-word.active {
+  opacity: 1;
+  background: none;
+}
+
+.classifier-buttons {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.classifier-btn {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+.classifier-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+#btn-non-corporate{
+  background: var(--dark);
+  border: 1px solid var(--green-light);
+}
+
+#btn-corporate{
+  background: var(--green-light);
+  border:none;
+}
+.classifier-btn:active {
+  transform:scale(1.1);
+  box-shadow: 0 2px 8px rgba(191, 223, 173, 0.4);
+}
+
+.classifier-success-message {
+  display:none;
+  background: var(--white);
+    color: var(--dark);
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 2em;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.classifier-success-message.show {
+  display:block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width:1024px){
+  .classifier-list-container{
+    max-width:250px;
+  }
+  .classifier-row{
+    gap:1rem;
+  }
+  .classifier-title{
+    font-size:1.6rem;
+  }
+  .classifier-word{
+    font-size:1.6rem;
+  }
+  .classifier-word.active{
+    font-size:1.6rem;
+  }
+}
+@media (max-width: 700px) {
+  
+  .classifier-task{
+    margin-top: 5rem;
+  }
+  .classifier-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 180px;
+    margin-bottom: 0;
+  }
+  .classifier-title {
+    text-align: center;
+    font-size: 1.5rem;
+    min-width: 0;
+  }
+  .classifier-list-container {
+    height: 50px;
+    justify-content: center;
+    overflow:hidden;
+  }
+  .classifier-list {
+    min-height: 90px;
+    align-items: center;
+  }
+  .classifier-word {
+    min-width: 90px;
+    font-size: 1.5rem;
+  }
+  .classifier-word.active {
+    font-size: 1.5rem;
+  }
+  .classifier-buttons{
+    gap:1rem;
+  }
+  .classifier-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .classifier-btn img {
+    width: 30px;
+    height: 30px;
+  }
+  .classifier-success-message{
+    font-size:1rem;
+    padding:0.25rem 0.75rem;
+    border-radius:8px;
+  }
+}

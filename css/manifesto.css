@@ -1,0 +1,490 @@
+header {
+   margin-bottom:0;
+}
+
+header .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 3;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+header .title img {
+    width: 3vw;
+    height: auto;
+}
+
+.manifesto-container {
+    height: 100vh;
+    background: var(--dark);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+/* Back button styles */
+.back-page {
+    padding-top: 2rem;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    gap: 0.75rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-icon {
+    width: 18px;
+    height: auto;
+    transform: rotate(90deg);
+}
+
+.back-page:hover {
+    gap: 0.5rem;
+    transform: translateX(-10px);
+}
+
+/* Grid layout */
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.manifesto-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: fit-content;
+}
+
+.manifesto-item .content {
+    flex: 1;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.manifesto-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typography */
+.manifesto-item h1 {
+   text-align: left;
+   padding-bottom: 3rem;
+   border-bottom: 8px solid var(--green-light);
+   margin:0;
+}
+
+.manifesto-item p {
+    text-align: left;
+    padding-right:0.5rem;
+    padding-top: 0.5rem;
+}
+
+.manifesto-item strong {
+    font-weight: 500;
+}
+
+/* Estructura valores */
+
+.first-column, .second-column{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.manifesto-item.productivity {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    .content {
+        width: 40%;
+        margin-left: auto;
+    }
+
+    .image {
+        width: 45%;
+        height: auto;
+        aspect-ratio: 4/3;
+        margin-left: 0;
+        overflow: hidden;
+    }
+}
+
+.manifesto-item.separation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+    .content {
+        max-width: 50%;
+        padding-right: 2rem;
+    }
+
+    .image {
+        width: 35%;
+        height: auto;
+        object-fit: cover;
+        overflow: hidden;
+        margin-left: auto;
+    }
+}
+
+.manifesto-item.wellbeing {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    .content {
+        width: 50%;
+        margin-left: auto;
+        padding-left: 2rem;
+        text-align: right;
+    }
+
+    .image {
+        width: 35%;
+        height: auto;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+
+    }
+}
+
+.manifesto-item.identity {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+
+    .content {
+        width: 45%;
+        padding: 2rem;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .image {
+        width: 50%;
+        height: auto;
+        aspect-ratio: 16/9;
+        margin-left: auto;
+        overflow: hidden;
+    }
+}
+
+
+
+/* Tablet adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .manifesto-grid {
+        gap: 3rem;
+    }
+
+    /* Ajustes comunes para todos los manifesto-item */
+    .manifesto-item.productivity,
+    .manifesto-item.separation,
+    .manifesto-item.wellbeing,
+    .manifesto-item.identity {
+        flex-direction: column;
+        gap: 2rem;
+        padding-block: 1rem;
+
+        .content {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .image {
+            width: 100%;
+            margin: 0;
+            order: -1;
+        }
+
+        h1 {
+            text-align: left;
+            line-height: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 6px solid var(--green-light);
+        }
+
+        p {
+            text-align: left;
+            padding-right: 0;
+        }
+    }
+    .first-column, .second-column{
+        gap: 0rem;
+    }
+    /* Ajustes específicos para mantener aspect-ratios */
+    .manifesto-item.productivity .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.wellbeing .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.separation .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.identity .image {
+        aspect-ratio: 4/3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header .content {
+        margin-block: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    header .title{
+        margin:0;
+        gap:0.25rem;
+    h1{
+        margin:0;
+    }}
+
+    header .subtitle{
+        margin-bottom: 0;
+        margin-top: 0.25rem;
+    }
+
+    header .title img {
+        width: 6vw;
+    }
+
+    .manifesto-container {
+        padding: 1rem;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        
+        /* Ocultar scrollbar para Chrome, Safari y Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Ocultar scrollbar para IE, Edge y Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+   
+    .manifesto-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 80vw;
+        height: auto;
+        padding: 0;
+    }
+
+    .first-column, .second-column {
+        gap: 2rem;
+        height: auto;
+    }
+
+    /* Ajuste de alturas para items */
+    .manifesto-item {
+        min-height: fit-content;
+        margin-bottom: 2rem;
+        h1{
+            padding-bottom: 2rem;
+            border-bottom: 6px solid var(--green-light);
+        }
+    }
+    .manifesto-item.identity{
+        margin-bottom: 2rem;
+    }
+
+    .manifesto-item .content {
+        padding:0 0;
+    }
+
+    /* Productivity */
+    .manifesto-item.productivity {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        .image {
+            width: 35%;
+            height: auto;
+            aspect-ratio: auto;
+            margin-left: 0;
+            order: -1;
+        }
+
+        .content {
+            max-width: 60%;
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+
+    /* Separation */
+    .manifesto-item.separation {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        .image {
+            width: 35%;
+            height: auto;
+            margin-left: auto;
+            order: 1;
+        }
+
+        .content {
+            text-align: right;
+            max-width: 60%;
+            padding-right: 0;
+
+            h1{
+                text-align: right;
+            }
+            p{
+                text-align: right;
+            }
+        }
+    }
+
+    /* Identity */
+    .manifesto-item.identity {
+        flex-direction: column;
+        gap: 2rem;
+
+        .image {
+            width: 100%;
+            margin-left: 0;
+            order: -1;
+        }
+
+        .content {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    /* Well-being */
+    .manifesto-item.wellbeing {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+
+        .image {
+            width: 35%;
+            order: -1;
+            aspect-ratio: auto;
+        }
+
+        .content {
+            width: 60%;
+            margin-left: 0;
+            padding-left: 0;
+            text-align: left;
+        }
+    }
+
+    .back-page {
+        padding-top: 0;
+        padding-bottom: 3rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .manifesto-grid{
+        gap:0;
+    }
+    .manifesto-item{
+        margin-bottom: 1rem;
+    }
+   .first-column, .second-column{
+    gap:0;
+   }
+    .manifesto-item.productivity,
+    .manifesto-item.separation,
+    .manifesto-item.wellbeing,
+    .manifesto-item.identity {
+        flex-direction: column;
+        gap: 2rem;
+        padding-block: 1rem;
+
+        .content {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .image {
+            width: 100%;
+            margin: 0;
+            order: -1;
+        }
+    }
+    .manifesto-item.separation{
+
+        .content{
+           
+            h1{
+                text-align: left;
+            }
+            p{
+                text-align: left;
+            }
+        }
+        
+    }
+    .manifesto-item.productivity .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.wellbeing .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.separation .image {
+        aspect-ratio: 4/3;
+    }
+
+    .manifesto-item.identity .image {
+        aspect-ratio: 4/3;
+    }
+}
+

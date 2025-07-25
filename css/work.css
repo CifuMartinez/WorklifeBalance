@@ -1,0 +1,806 @@
+/*BACK BUTTON*/
+.back-page {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-icon {
+    width: 18px;
+    height: auto;
+    opacity: 0.6; 
+    transform: rotate(90deg);
+    transition: opacity 0.3s ease;
+}
+
+.back-page:hover {
+    gap: 0.5rem;
+    transform: translateX(-10px) scale(0.95);
+}
+
+
+/*WORK CONTAINER*/
+.work-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 300px;
+    gap: 16rem;
+    height: calc(100vh - 100px);
+}
+
+/* Sección de progreso */
+.progress-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.progress-bar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.progress-bar-container.phone{
+    display: none;
+}
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.35rem;
+}
+
+.line-percentage{
+    width: 36px;
+    height: 6px;
+    border: 1px solid var(--green-light);
+    border-radius: 4px;
+}
+
+.line-percentage.active {
+    background: var(--green-light);
+}
+
+.number-percentage{
+    font-size: 2.5rem;
+    font-weight: 400;
+    span{
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
+.badget-progress{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+.badge-container.small{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 6px;
+}
+
+
+/*CARPETAS CENTRALES*/
+
+.folders-section {
+    position: relative;
+    height:850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+/* Contenedor de botones de control */
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.arrow-up,
+.arrow-down {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.arrow-up .cls-1,
+.arrow-down .cls-1 {
+    fill: var(--green-light);
+}
+
+.arrow-up {
+    transform: rotate(180deg) scale(1) translateY(0px);
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-up:active{
+    transform: rotate(180deg) scale(1.2) translateY(5px);
+}   
+
+.arrow-down{
+    transform: scale(1) translateY(0px);
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-down:active{
+    transform: scale(1.2) translateY(5px);
+}   
+.slide{
+    width: 18px;
+    height: 6px;
+    border: 1px solid var(--green-light);
+    border-radius: 1px;
+}
+
+/* Contenedor de carpetas */
+.folders-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+}
+
+.folder {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.folder.clicked {
+    animation: folderClick 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    pointer-events: none;
+}
+
+.folder.active {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+/*Carpeta bloqueada*/
+.folder.locked {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Carpeta exterior y pestaña */
+.carpeta-exterior {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.carpeta-pestaña {
+    position: absolute;
+    top: 0px;
+    left: 39px;
+    width: 185px; /* Ajusta según el tamaño de tu SVG */
+    z-index: -1;
+}
+
+/* Progreso */
+.folder-progress {
+    position: absolute;
+    z-index: 2;
+    color: var(--green-light);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease-out;
+}
+
+.folder.active .folder-progress{
+    opacity: 1;
+    visibility: visible;
+}
+/* Documento */
+.document-folder {
+    position: absolute;
+    z-index: 0;
+    background:var(--white);
+    width: 125px;
+    height: 150px;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transform: scale(0.8)translate(5%, -20%) rotate(6deg);
+    opacity: 0;
+    visibility: hidden;
+}
+.folder.active .document-folder {
+    transform: scale(1)translate(5%, -32%) rotate(10deg);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s ease;
+}
+
+.document-title {
+    padding-top: 0.5rem;
+    color: var(--dark);
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+/*RIGHT SECTION*/
+
+.desk-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Panel de información */
+.info-panel {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    min-width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        margin-bottom: 0.5rem;
+    }
+    h2{
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    p{
+        padding-inline:1rem;
+    }
+}
+
+
+/*BADGES*/
+.badges-earned{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+
+    h2.subrayado{
+        margin-bottom:2.5rem;
+        background:var(--white);
+        color:var(--dark);
+        padding:0.15rem 4rem;
+    }
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+/* Clase específica para ajustar tamaño del badge */
+.badge-container{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    border-radius: 8px;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.badge-container img {
+    width: 60%;
+    height: 60%;
+}
+
+
+/* Timer */
+.timer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+h3.time{
+    margin-top:0;
+}
+
+#clock-animation {
+    width: 5rem;
+    height: 5rem;
+}
+
+.timer-container-phone{
+    display: none;
+}
+/*TOOLTIP*/
+
+.tooltip {
+    position: fixed;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--green-light);
+    max-width: 240px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Añadir esta clase para que el tooltip sea visible */
+.tooltip.visible {
+    opacity: 1;
+}
+
+.tooltip-title {
+    display: block;
+    color: var(--green-light);
+    font-size: 1.1rem;
+    font-weight:600;
+    margin-bottom: 0.25rem;
+}
+
+/* Botones de navegación */
+.nav-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+} 
+
+/* Modal de completado */
+.completion-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.completion-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 60%;
+    width: 800px;
+    transform: translateY(20px) scale(0.8);
+    transition: transform 0.3s ease-in-out;
+
+    p{
+        font-size: 18px;
+    }
+
+    h3{
+        padding-block: 1rem;
+    }
+}
+
+.completion-modal.active .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-star {
+    width: 4rem;
+    height: 4rem;
+}
+
+.achievement-message {
+    background: var(--green-dark);
+    margin-inline:6rem;
+    margin-block:1.5rem;
+    border-radius: 0.8em;
+    p{
+        padding:0.5rem;
+        font-weight: 400;
+    }
+    
+}
+
+.begin-again {
+    color: var(--green-dark);
+}
+
+button{
+    margin-block:1rem;
+    padding:0.25rem 0.5rem;
+    
+}
+
+
+@media (max-width: 1280px){
+    .work-container{
+        gap:8rem;
+    }
+    .achievement-message{
+        margin-inline:2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .back-page{
+        top: 1rem;
+        left: 50%;
+        transform: translate(-50%,0) scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+    .back-icon{
+        width: 18px;
+        height: 18px;
+    }
+    .back-page:hover{
+        transform: translate(-55%,0) scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .work-container {
+        grid-template-columns: 1fr;
+        align-items: flex-end;
+        gap: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Progress section desktop*/
+    .progress-section.desktop{
+        display: none;
+    }
+    
+
+    /* Ajustes para las carpetas */
+    .folders-section {
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        overflow-x: hidden;
+        margin-bottom: -2rem;
+        min-height: 300px; 
+    }
+
+    .folders-container {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        /* padding: 0 calc(50% - 125px); Centra la primera carpeta (250px/2) */
+    }
+
+    .folder {
+        width: 250px;
+        height: 150px;
+        flex-shrink: 0; /* Evita que las carpetas se compriman */
+    }
+    .carpeta-pestaña{
+        left:40px;
+    }
+    .document-folder{
+        width:75px;
+        height: 100px;
+        gap:0.25rem;
+        .check-container{
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+        h2{
+            font-size: 12px;
+        }
+    }
+
+    /* Ajustes para los controles */
+    .control-buttons {
+        order:2;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.25rem;
+        padding:0.5rem 0;
+    }
+    .arrow-up, .arrow-down{
+        width: 18px;
+        height: 18px;
+    }
+    .slide {
+        width: 6px;
+        height: 16px;
+    }
+    .arrow-up {
+        transform: rotate(90deg)scale(1) translateY(0px);
+    }
+
+    .arrow-up:active{
+        transform: rotate(90deg)scale(1.2) translateY(5px);
+    }
+    .arrow-down{
+        transform: rotate(-90deg)scale(1) translateY(0px);
+    }
+
+    .arrow-down:active{
+        transform: rotate(-90deg)scale(1.2) translateY(5px);
+    }
+    .slides-container {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    /* Ajustes para el panel de información */
+    .info-panel {
+        width: 65vw;
+        max-width: none;
+        padding-bottom: 2.5rem;
+        h1{
+            margin-bottom:0.5rem;
+        }
+        h2{
+            margin-bottom:1rem;
+        }
+    }
+    .info-panel p{
+        padding-inline:3rem;
+        font-size: 14px;
+    }
+    .badges-earned{
+        h2.subrayado{
+            font-size: 14px;
+            margin-bottom:1.5rem;
+        }
+    }
+    /* Ocultar badges-grid */
+    .badges-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding-bottom:0.5rem;
+
+        .badge-container{
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    /* Progress section dentro del info panel */
+    .progress-bar-container.phone{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top:1rem;
+        gap:0.5rem;
+    }
+
+    .progress-bar-container .number-percentage{
+        font-size: 1.4rem;
+        span{
+            font-size: 1.15rem;
+        }
+    }
+    .progress-bar-container .line-percentage{
+        width:2px;
+        height: 20px;
+    }
+    .progress-bar-container .progress-bar{
+        flex-direction: row;
+        justify-content: space-between;
+        gap:1rem;
+    }
+
+    .badget-progress {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .badge-container.small {
+        width: 40px;
+        height: 40px;
+    }
+
+    .timer-container{
+        padding-top: 1rem;
+
+    }
+    .timer-container.desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+
+        h3.time{
+            margin:0;
+        }
+    }
+    #clock-animation{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .modal-content{
+        max-width: 60%;
+        h1{
+            margin-top:0.35rem;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    .modal-star{
+        width: 3rem;
+        height: 3rem;
+    }
+    button{
+        font-size: 16px;
+    }
+    .achievement-message{
+        margin-inline:4rem;
+    }
+}
+
+
+@media (max-width: 640px) {
+    
+    a{
+        font-size: 14px;
+    }
+
+    .info-panel {
+        width: 80vw;
+        padding-bottom: 2rem;
+    }
+
+    .info-panel p{
+        padding-inline:1rem;
+    }
+
+    .badges-grid{
+        gap:1rem;
+    }
+    .progress-bar-container .progress-bar{
+        gap:0.7rem;
+    }
+    .progress-bar-container .number-percentage{
+        font-size: 1.2rem;
+        span{
+            font-size: 1rem;
+        }
+    }
+
+    .timer-container.desktop{
+        display: none;
+    }
+    .timer-container-phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        padding-bottom: 1rem;
+        h3.time{
+            margin:0;
+        }
+    }
+    #clock-animation-mobile{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .modal-content{
+        max-width: 80%;
+        h1{
+            margin-top:0.35rem;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .modal-star{
+        width: 3rem;
+        height: 3rem;
+    }
+    button{
+        font-size: 14px;
+    }
+    .achievement-message{
+        margin-inline:1rem;
+    }
+
+}
+
+@media (max-width: 390px) {
+    
+    .info-panel{
+        padding:2rem 0.5rem;
+
+        h1{
+            margin-top:0;
+        }
+    }
+    
+    .info-panel p{
+        padding-inline:0.5rem;
+    }
+    .badges-grid{
+        gap:0.5rem;
+    }
+    .badge-container{
+        width: 28px;
+        height: 28px;
+}
+    .progress-bar-container .progress-bar{
+        gap:0.5rem;
+    }
+    .progress-bar-container .number-percentage{
+        font-size: 1.2rem;
+        span{
+            font-size: 1rem;
+        }
+    }
+    .achievement-message{
+        margin-inline:0rem;
+    }
+
+}
+
+@keyframes folderClick {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

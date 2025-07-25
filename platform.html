@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worklife Platform</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/facivon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon_16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon_32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon_192.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/platform.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body class="platform-page">
+    <main class="platform-container">
+        <div class="head-container">
+            <div class="head-container-left">
+                <h1 class="gran-titular">How are you today?</h1>  
+                <div class="mood-states">
+                    <div class="mood-state">
+                        <div class="excelent">
+                            <div class="mood-state-icon"></div>
+                            <div class="mood-state-icon"></div>
+                        </div>
+                        <h2>Excelent</h2>
+                    </div>
+                    <div class="mood-state good">
+                        <div class="mood-state-icon"></div>
+
+                        <h2>Good</h2>
+                    </div>
+                    <div class="mood-state unmotivated">
+                        <div class="mood-state-icon">
+                            <div class="inner-icon"></div>
+                        </div>
+                        <h2>Unmotivated</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="head-container-right" data-tooltip="<span class='tooltip-title'>Time marches on.</span>Work harder, be better—your efficiency is your legacy.">
+                <div id="clock-animation"></div>
+                <h3 class="time">00:00</h3>
+            </div>
+        </div>
+        </div>
+
+        <div class="platform-boxes">
+            <div class="platform-box inspiration-box">
+                <h1 class="caja">Worklife manifesto</h1>
+                <p class="box-description">The principles of progress and autonomy of work to progress and be better.</p>
+                <button class="box-button inspiration caja">Inspiration</button>
+                <div class="box-icon">
+                    <img src="assets/document.svg" alt="Manifesto icon">
+                </div>
+                <div class="toggle-icon">
+                    <img src="assets/Arrow.svg" alt="Toggle">
+                </div>
+            </div>
+
+            <div class="platform-box work-box">
+                <h1 class="caja">Continue with your quarterly progress</h1>
+                <p class="box-description">Achieves results to achieve awards and recognition.</p>
+                <button class="box-button work caja">Work</button>
+                <div class="progress-percentage">
+                    <h3 class="progress-percentage-number">60%</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="toggle-icon">
+                    <img src="assets/Arrow.svg" alt="Toggle">
+                </div>
+            </div>
+
+            <div class="platform-box breathe-box">
+                <!-- Estructura para pantallas grandes -->
+                <h1 class="caja">Relaxation and motivation area</h1>
+                <p class="box-description">Take a moment to pause and realign with what quietly drives your purpose.</p>
+                <button class="box-button breathe caja">Breathe</button>
+                <div class="box-icon">
+                    <img src="assets/relax_area.svg" alt="Flower icon">
+                </div>
+                <div class="toggle-icon">
+                    <img src="assets/Arrow.svg" alt="Toggle">
+                </div>
+                <!-- Estructura para pantallas <1024px (inicialmente oculta) -->
+                <div class="responsive-layout">
+                    <div class="breathe-content">
+                        <h1 class="caja">Relaxation and motivation area</h1>
+                        <p class="box-description">Sensitive room to get to know my outer self</p>
+                        <button class="box-button breathe caja">Breathe</button>
+                    </div>
+                    <div class="breathe-icon">
+                        <div class="box-icon">
+                            <img src="assets/relax_area.svg" alt="Flower icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nueva estructura para móvil (inicialmente oculta) -->
+<div class="mobile-clock">
+    <div class="head-container-right" data-tooltip="<span class='tooltip-title'>Time marches on.</span>Work harder, be better—your efficiency is your legacy.">
+        <div id="clock-animation-mobile"></div>
+            <h3 class="time">00:00</h3>
+        </div>
+    </div>
+    </main>
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/TextPlugin.min.js"></script>
+    <script src="js/platform.js" defer></script>
+    <script src="js/timer.js" defer></script>
+</body>
+</html> 

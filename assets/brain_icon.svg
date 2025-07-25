@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Material_Referencias" data-name="Material &amp;amp; Referencias" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.82 56.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #92d178;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M4.63,15.6h4.63v5.12h-4.63v-5.12Z"/>
+  <path class="cls-1" d="M11.51,20.61h4.63v5.12h-4.63v-5.12Z"/>
+  <path class="cls-1" d="M46.98,30.59h4.63v5.12h-4.63v-5.12Z"/>
+  <path class="cls-1" d="M16.14,29.29h4.63v9.73h-4.63v-9.73Z"/>
+  <path class="cls-1" d="M42.35,15.74h4.63v9.73h-4.63v-9.73Z"/>
+  <path class="cls-1" d="M4.63,36.1h4.63v5.12h-4.63v-5.12Z"/>
+  <path class="cls-1" d="M9.2,5.12v10.48h4.63V5.12h-4.63Z"/>
+  <path class="cls-1" d="M9.2,41.22v10.48h4.63v-10.48h-4.63Z"/>
+  <path class="cls-1" d="M13.82,56.82h10.48v-5.12h-10.48v5.12Z"/>
+  <path class="cls-1" d="M13.82,5.12h10.48V0h-10.48v5.12Z"/>
+  <path class="cls-1" d="M0,20.72v15.37h4.63v-15.37H0Z"/>
+  <path class="cls-1" d="M24.31,5.12v46.58h4.63V5.12h-4.63Z"/>
+  <path class="cls-1" d="M58.19,41.22h-4.63v-5.12h4.63v5.12Z"/>
+  <path class="cls-1" d="M58.19,20.72h-4.63v-5.12h4.63v5.12Z"/>
+  <path class="cls-1" d="M53.62,51.7v-10.48h-4.63v10.48h4.63Z"/>
+  <path class="cls-1" d="M53.62,15.6V5.12h-4.63v10.48h4.63Z"/>
+  <path class="cls-1" d="M49,0h-10.48v5.12h10.48V0Z"/>
+  <path class="cls-1" d="M49,51.7h-10.48v5.12h10.48v-5.12Z"/>
+  <path class="cls-1" d="M62.82,36.1v-15.37h-4.63v15.37h4.63Z"/>
+  <path class="cls-1" d="M38.51,51.7V5.12h-4.63v46.58h4.63Z"/>
+</svg>

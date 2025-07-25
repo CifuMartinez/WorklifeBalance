@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Pantallas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.5 56.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #92d178;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="44.15 0 44.15 5.18 41.79 5.18 41.79 15.53 36.61 15.53 36.61 5.18 26.96 5.18 26.96 15.53 21.79 15.53 21.79 5.18 18.27 5.18 18.27 0 44.15 0"/>
+  <rect class="cls-1" x="20.71" y="41.29" width="1" height=".05"/>
+  <polygon class="cls-1" points="59.76 15.47 59.76 41.35 54.58 41.35 54.58 30.99 46.96 30.99 46.96 41.35 41.79 41.35 41.79 30.99 21.72 30.99 21.72 41.29 20.71 41.29 20.71 41.35 16.54 41.35 16.54 30.99 7.92 30.99 7.92 41.35 2.74 41.35 2.74 15.47 7.92 15.47 7.92 25.82 16.54 25.82 16.54 15.47 21.72 15.47 21.72 25.82 41.79 25.82 41.79 15.47 46.96 15.47 46.96 25.82 54.58 25.82 54.58 15.47 59.76 15.47"/>
+  <rect class="cls-1" x="7.92" y="10.35" width="5.18" height="5.18"/>
+  <rect class="cls-1" x="49.41" y="10.35" width="5.18" height="5.18"/>
+  <rect class="cls-1" x="13.1" y="5.17" width="5.18" height="5.18" transform="translate(7.93 23.45) rotate(-90)"/>
+  <rect class="cls-1" x="44.23" y="5.17" width="5.18" height="5.18" transform="translate(39.06 54.58) rotate(-90)"/>
+  <polygon class="cls-1" points="44.23 51.65 44.23 56.82 18.35 56.82 18.35 51.65 20.71 51.65 20.71 41.35 21.72 41.35 21.72 41.29 25.89 41.29 25.89 51.65 35.55 51.65 35.55 41.29 40.72 41.29 40.72 51.65 44.23 51.65"/>
+  <rect class="cls-1" x="20.71" y="41.29" width="1" height=".05"/>
+  <rect class="cls-1" x="49.41" y="41.29" width="5.18" height="5.18"/>
+  <rect class="cls-1" x="7.92" y="41.29" width="5.18" height="5.18"/>
+  <rect class="cls-1" x="44.23" y="46.47" width="5.18" height="5.18" transform="translate(95.88 2.24) rotate(90)"/>
+  <rect class="cls-1" x="13.1" y="46.47" width="5.18" height="5.18" transform="translate(64.75 33.37) rotate(90)"/>
+</svg>

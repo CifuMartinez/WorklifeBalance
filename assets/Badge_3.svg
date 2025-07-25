@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Pantallas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #282828;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M29.98,29.95H.02C.02,21.98,6.24,15.46,14.1,15,6.24,14.53.02,8.02.02.05h29.95c0,7.97-6.23,14.48-14.07,14.95,7.85.46,14.07,6.98,14.07,14.95Z"/>
+</svg>

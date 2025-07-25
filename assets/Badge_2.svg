@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Pantallas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #282828;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="19.86 19.8 19.86 10.07 10.14 10.07 10.14 .35 .41 .35 .41 29.53 10.14 29.53 19.86 29.53 29.59 29.53 29.59 19.8 19.86 19.8"/>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="puntos_ruptura" data-name="puntos ruptura" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #bfdfad;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M50.39,26.98c-.28-12.41-10.41-22.38-22.89-22.38S4.89,14.57,4.61,26.98h-.01v23.42h45.8v-23.42h-.01Z"/>
+</svg>

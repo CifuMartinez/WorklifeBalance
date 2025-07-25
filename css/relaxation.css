@@ -1,0 +1,853 @@
+.relaxation-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: var(--background);
+    position: relative;
+    padding: 2rem;
+}
+
+/* Header styles */
+.relaxation-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 2rem;
+
+    h1{
+        margin:0;
+    }
+
+    h2{
+        margin:0;
+    }
+}
+
+.icon img {
+    width: 5vw;
+    height: auto;
+}
+
+/* Orbital circles */
+.orbital-system {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.orbit-1 { 
+    width: 200px; 
+    height: 200px;
+}
+.orbit-2 { 
+    width: 350px; 
+    height: 350px;
+}
+.orbit-3 { 
+    width: 550px; 
+    height: 550px;
+}
+.orbit-4 { 
+    width: 750px; 
+    height: 750px;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+/* Circles container */
+
+.circles-container {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    margin-top:0;
+}
+/*Colors button*/
+
+/* Happiness */
+.happiness .circle{
+    background: var(--purple-dark);
+    border: 2px solid var(--purple-light);
+}
+
+.happiness .open-symbol-line {
+    background: var(--purple-light);
+}
+
+.happiness .team-label{
+    background: var(--purple-dark);
+    color: var(--purple-light);
+    border: 2px solid var(--purple-light);
+}
+
+/* Hobby */
+.hobby .circle{
+    background: var(--skin-dark);
+    border: 2px solid var(--skin-light);
+}
+
+.hobby .open-symbol-line {
+    background: var(--skin-light);
+}
+
+.hobby .team-label{
+    background: var(--skin-dark);
+    color: var(--skin-light);
+    border: 2px solid var(--skin-light);
+}
+
+/* Behavior */
+.behaviour .circle{
+    background: var(--green-dark);
+    border: 2px solid var(--green-light);
+}
+
+.behaviour .open-symbol-line {
+    background: var(--green-light);
+    }
+
+.behaviour .team-label{
+    background: var(--green-dark);
+    color: var(--green-light);
+    border: 2px solid var(--green-light);
+}
+
+/* Social Context */
+.social .circle{
+    background: var(--blue-dark);
+    border: 2px solid var(--blue-light);
+}
+
+.social .open-symbol-line {
+    background: var(--blue-light);
+} 
+
+.social .team-label{
+    background: var(--blue-dark);
+    color: var(--blue-light);
+    border: 2px solid var(--blue-light);
+}
+
+/* Outie Feelings */    
+.sentimental .circle{
+    background: var(--pink-dark);
+    border: 2px solid var(--pink-light);
+}
+
+.sentimental .open-symbol-line {
+    background: var(--pink-light);
+}
+
+.sentimental .team-label{
+    background: var(--pink-dark);
+    color: var(--pink-light);
+    border: 2px solid var(--pink-light);
+}
+
+
+/* Animaciones de movimiento flotante */
+@keyframes floatingButtonHappiness {
+    0% {
+        transform: translate(-210px,-175px) translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-210px,-185px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-210px,-175px) translate(-50%, -50%);
+    }
+}
+
+@keyframes floatingButtonHobby {
+    0% {
+        transform: translate(-90px, 152px) translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-80px, 152px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-90px, 152px) translate(-50%, -50%);
+    }
+}
+
+@keyframes floatingButtonBehavior {
+    0% {
+        transform: translate(175px,215px) translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(175px,225px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(175px,215px) translate(-50%, -50%);
+    }
+}
+
+@keyframes floatingButtonSocial {
+    0% {
+        transform: translate(-250px, 280px) translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-260px, 280px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-250px, 280px) translate(-50%, -50%);
+    }
+}
+
+@keyframes floatingButtonSentimental {
+    0% {
+        transform: translate(245px,-125px) translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(245px,-135px) translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(245px,-125px) translate(-50%, -50%);
+    }
+}
+
+.circle-button {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+    left: 50%;
+    top: 50%;
+    transition: opacity 0.3s ease;
+}
+
+/* Posicionamiento y animación de los botones */
+.circle-button:nth-child(1) { /* happiness */
+    animation: floatingButtonHappiness 3s ease-in-out infinite;
+}
+
+.circle-button:nth-child(2) { /* hobby */
+    animation: floatingButtonHobby 3.5s ease-in-out infinite;
+}
+
+.circle-button:nth-child(3) { /* behavior */
+    animation: floatingButtonBehavior 4s ease-in-out infinite;
+}
+
+.circle-button:nth-child(4) { /* social */
+    animation: floatingButtonSocial 3.2s ease-in-out infinite;
+}
+
+.circle-button:nth-child(5) { /* sentimental */
+    animation: floatingButtonSentimental 3.7s ease-in-out infinite;
+}
+
+/* Estado activo - detiene la animación y mantiene la posición */
+.circle-button.active:nth-child(1) {
+    animation: none;
+    transform: translate(-210px,-175px) translate(-50%, -50%);
+}
+
+.circle-button.active:nth-child(2) {
+    animation: none;
+    transform: translate(-90px, 152px) translate(-50%, -50%);
+}
+
+.circle-button.active:nth-child(3) {
+    animation: none;
+    transform: translate(175px,215px) translate(-50%, -50%);
+}
+
+.circle-button.active:nth-child(4) {
+    animation: none;
+    transform: translate(-250px, 280px) translate(-50%, -50%);
+}
+
+.circle-button.active:nth-child(5) {
+    animation: none;
+    transform: translate(245px,-125px) translate(-50%, -50%);
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.open-symbol {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.open-symbol-line {
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    border-radius: 1px;
+}
+
+.open-symbol-line:nth-child(1) {
+    transform: rotate(90deg);
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.open-symbol-line:nth-child(2) {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.circle-button.active .circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(243, 238, 232, 0.5);
+}
+
+.circle-button.active .open-symbol-line:nth-child(1) {
+    opacity: 0;
+}
+
+.circle-button.active .open-symbol-line:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.team-label {
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    transform-origin: 15% 50%;
+    transform: translateY(-50%) rotate(90deg);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.circle-button.active .team-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) rotate(0deg);
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out, transform 0.2s ease-out;
+} 
+
+
+/* Message display */
+.message-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.message-display.visible {
+    opacity: 1;
+}
+
+.message {
+    font-size: 30px;
+    max-width: 40vw;
+    font-family: 'Mona Sans', sans-serif;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* Cuando hay un botón activo, todos los botones tendrán opacidad reducida */
+.circles-container.has-active .circle-button {
+    opacity: 0.3;
+}
+
+/* El botón activo mantendrá su opacidad completa */
+.circles-container.has-active .circle-button.active {
+    opacity: 1;
+}
+
+/* Audio Control */
+.audio-control {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.audio-text {
+    color: var(--white);
+    font-family:'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.sound-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.sound-toggle:hover {
+    opacity: 1;
+}
+
+.sound-toggle img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+.sound-toggle .sound-icon {
+    opacity: 0;
+}
+
+.sound-toggle .sound-off {
+    opacity: 1;
+}
+
+.sound-toggle.muted .sound-icon {
+    opacity: 1;
+}
+
+.sound-toggle.muted .sound-off {
+    opacity: 0;
+}
+
+.back-page {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-icon {
+    width: 18px;
+    height: auto;
+    opacity: 0.6; 
+    transform: rotate(90deg);
+    transition: opacity 0.3s ease;
+}
+
+.back-page:hover {
+    gap: 0.5rem;
+    transform: translateX(-10px) scale(0.95);
+}
+
+
+/* --- Animación Lottie puerta --- */
+#lottie-door {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 14vw;
+    height: 14vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  #lottie-door svg {
+    max-width: 60vw;
+    max-height: 60vh;
+  }
+  /* --- Fin animación Lottie puerta --- */
+
+  
+@media screen and (max-width: 980px) {
+    .sound-toggle{
+        width: 40px;
+        height: 40px;
+    }
+    .audio-text{
+        font-size: 14px;
+        max-width: 160px;
+        text-align: right;
+        line-height: 1;
+    }
+    .back-page{
+        img{
+            width: 20px;
+        }
+
+        a{
+            font-size: 16px;
+        }
+    }
+    .header-content{
+        padding-top:4rem;
+        gap: 0.25rem;
+    }
+    .icon img{
+        width: 8vw;
+        height: auto;
+    }
+   
+
+    .orbital-system{
+       transform:scale(0.8);
+       top: 54%;
+    }
+    .circles-container{
+        top: 54%;
+    }
+
+    #lottie-door{
+        top: 50%;
+        left: 80%;
+        width: 24vw;
+        height: 24vh;
+    }
+    /* Ajuste de posiciones de los botones para escala 0.8 */
+    @keyframes floatingButtonHappiness {
+        0% {
+            transform: translate(-168px,-140px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-168px,-148px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-168px,-140px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonHobby {
+        0% {
+            transform: translate(-100px, 100px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-100px, 92px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-100px, 100px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonBehavior {
+        0% {
+            transform: translate(60px,126px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(60px,120px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(60px,126px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonSocial {
+        0% {
+            transform: translate(-70px, 300px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-70px, 292px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-70px, 300px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonSentimental {
+        0% {
+            transform: translate(40px,-220px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(40px,-212px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(40px,-220px) translate(-50%, -50%);
+        }
+    }
+
+    /* Estado activo - detiene la animación y mantiene la posición */
+    .circle-button.active:nth-child(1) {
+        animation: none;
+        transform: translate(-168px,-140px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(2) {
+        animation: none;
+        transform: translate(-100px, 100px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(3) {
+        animation: none;
+        transform: translate(60px,126px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(4) {
+        animation: none;
+        transform: translate(-70px, 300px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(5) {
+        animation: none;
+        transform: translate(40px,-220px) translate(-50%, -50%);
+    }
+
+    .circle{
+        width: 35px;
+        height: 35px;
+    }
+  
+    .open-symbol{
+        width: 10px;
+        height: 10px;
+    }
+
+    .team-label{
+        font-size: 18px;
+        padding: 6px 15px;
+        left: calc(100% + 5px);
+    }
+    
+    .message-display{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100vw;
+       }
+    .message{
+        font-size: 22px;
+        max-width: 70vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .header-content{
+        padding-top: 5rem;
+    }
+
+    h1{
+        font-size: 6vw;
+    }
+
+    h2{
+        font-size: 4vw;
+    }
+    .icon img{
+        width: 12vw;
+    }   
+    
+    .circle{
+        width: 25px;
+        height: 25px;
+    }
+
+    .open-symbol{
+        width: 8px;
+        height: 8px;
+    }
+    .open-symbol-line{
+        height: 12px;
+    }
+
+    .audio-control {
+        position: fixed;
+        width: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.7
+        5rem;
+        bottom: 1rem;
+        top: auto;
+        z-index: 10;
+    }
+
+    .audio-text {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .sound-toggle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .back-page {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+        z-index: 10;
+        border-radius: 50px;
+    }
+
+    .back-page img {
+        width: 15px;
+    }
+
+    .back-page a {
+        font-size: 14px;
+    }
+
+    .back-page:hover {
+        transform: translateX(-50%) scale(0.95);
+    }
+
+    #lottie-door{
+        top: 50%;
+        left: 80%;
+        width: 35vw;
+        height: 35vh;
+    }
+    /* Ajuste de posiciones de los botones para escala 0.8 */
+    @keyframes floatingButtonHappiness {
+        0% {
+            transform: translate(-120px,-190px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-120px,-182px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-120px,-190px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonHobby {
+        0% {
+            transform: translate(-100px, 100px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-100px, 92px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-100px, 100px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonBehavior {
+        0% {
+            transform: translate(0px,224px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(0px,216px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(0px,224px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonSocial {
+        0% {
+            transform: translate(-70px, 300px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(-70px, 292px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-70px, 300px) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes floatingButtonSentimental {
+        0% {
+            transform: translate(0px,-138px) translate(-50%, -50%);
+        }
+        50% {
+            transform: translate(0px,-132px) translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(0px,-138px) translate(-50%, -50%);
+        }
+    }
+
+    /* Estado activo - detiene la animación y mantiene la posición */
+    .circle-button.active:nth-child(1) {
+        animation: none;
+        transform: translate(-120px,-190px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(2) {
+        animation: none;
+        transform: translate(-100px, 100px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(3) {
+        animation: none;
+        transform: translate(0px,224px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(4) {
+        animation: none;
+        transform: translate(-70px, 300px) translate(-50%, -50%);
+    }
+
+    .circle-button.active:nth-child(5) {
+        animation: none;
+        transform: translate(0px,-138px) translate(-50%, -50%);
+    }
+
+    .team-label{
+        font-size: 16px;
+        padding: 4px 10px;
+        left: calc(100% + 3px);
+    }
+}
+

@@ -1,0 +1,241 @@
+.ruleta-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    width: 100%;
+    height: 500px;
+    max-width: 700px;
+    background: none;
+}
+
+.ruleta-columns {
+    display: flex;
+    gap: 4.5rem;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.ruleta-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    min-width: 90px;
+}
+
+/* Botones de flecha */
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0.75rem 0;
+    padding: 0;
+    outline: none;
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrow-btn:active{
+    transform: scale(1.1);
+}
+
+.arrow-btn img {
+    width: 22px;
+    height: 22px;
+    transform: scale(1);
+}
+
+
+/* Lista de iconos */
+.icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+    min-height: 180px;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 90px;
+    overflow: hidden;
+    background: none;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 60px;
+    background: none;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.icon-list li img {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated;
+    filter: grayscale(1) brightness(1);
+    opacity: 0.15;
+    background: none;
+    box-shadow: none;
+}
+
+.icon-list li.selected img {
+    opacity: 1;
+}
+
+.icon-list li.matched img {
+    opacity: 0.2;
+    filter: none;
+}
+
+/* Estilos para iconos correctos en el centro */
+.icon-list li.correct img {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.ruleta-hints {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    font-style: italic;
+}
+
+.ruleta-progress {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ruleta-progress-combo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.ruleta-progress-combo.completed {
+    opacity: 1;
+}
+
+.ruleta-progress-combo img {
+    width: 32px;
+    height: 32px;
+    filter: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.ruleta-progress-combo.completed img {
+    filter: none;
+    opacity: 1;
+}
+
+/* Mensaje de pista y finalización */
+.ruleta-hint-message {
+    color: var(--green-light);
+    font-size: 1.1rem;
+    text-align: center;
+    min-height: 2.2em;
+    max-width: 450px;
+}
+
+.final-message{
+    font-size: 1.2rem;
+    background: var(--white);
+    color: var(--dark);
+    padding: 1.25rem;
+    border-radius: 2em;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+/* Iconos usados en combos anteriores, resaltados en la ruleta */
+.icon-list li.used img {
+   filter:none;
+}
+
+
+@media (max-width: 768px) {
+    .ruleta-task{
+        margin-top: 5rem;
+    }
+.ruleta-columns{
+    gap:1.5rem;
+}
+.ruleta-hint-message{
+    font-size: 1rem;
+    max-width: 350px;
+}
+.ruleta-progress-combo img{
+    width: 24px;
+    height: 24px;
+}
+}
+
+@media (max-width: 480px) {
+    .ruleta-task{
+        margin-top: 4rem;
+    }
+    .ruleta-columns{
+        gap:0.75rem;
+    }
+    .ruleta-col{
+        min-width: 70px;
+    }
+    .icon-list{
+        width:60px;
+        margin:0.25rem 0;
+    }
+   .icon-list li{
+    width:40px;
+    height:40px;
+   }
+   .icon-list li img{
+    width: 32px;
+    height: 32px;
+   }
+   .ruleta-hints{
+    margin-top: 5rem;
+   }
+   .ruleta-hint-message{
+    font-size: 0.9rem;
+    max-width: 300px;
+   }
+   .ruleta-progress{
+    gap:1rem;
+   }
+   .ruleta-progress-combo{
+    gap:0.25rem;
+   }
+   .ruleta-progress-combo img{
+    width: 20px;
+    height: 20px;
+   }
+}
+
+@media (max-width: 320px) {
+    .ruleta-col{
+        min-width: 60px;
+    }
+
+}
