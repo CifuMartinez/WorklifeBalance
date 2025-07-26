@@ -697,6 +697,10 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 }
 
 @media screen and (max-width: 480px){
+
+    body{
+        height: 95vh;
+    }
    p{
     font-size: 14px;
    }
