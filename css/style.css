@@ -447,8 +447,8 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     color: var(--dark);
     margin: 0 auto;
     padding: 3rem 2rem;
-    width: 50%;
-    max-height: 60%;
+    width: 75%;
+    max-height: 75%;
     overflow-y: auto; /* Barra de desplazamiento */
     position: relative; /* Asegura que los elementos hijos con posición absoluta se posicionen relativamente a este contenedor */
     border-radius: 8px;
@@ -571,7 +571,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 2rem 2rem;
+    margin:1.5rem 0;
 }
 
 .modal .benefits-grid .benefit {
@@ -650,7 +650,10 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     button{
         font-size: 16px;
     }
-    
+    .modal-content{
+        width: 75%;
+        max-height: 75%;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -682,13 +685,15 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     button.group-button{
         margin-top: 1rem;
     }
-    
+
     .contract-section p{
         max-width: 70%;
     }
     p{
         font-size: 14px;
     }
+
+   
 }
 
 @media screen and (max-width: 480px){
@@ -699,7 +704,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     max-width: 85%;
    }
    button.group-button{
-    font-size: 14px;
+    font-size: 16px;
     height: 24px;
 
     .icon{
@@ -712,4 +717,27 @@ button.group-button.continue-arrow:hover .icon img:last-child {
         }
     }
    }    
+   .modal .flex-row{
+    flex-direction: column;
+    gap:1rem;
+    align-items: flex-start;
+    margin-inline: 0rem;
+
+    .left{
+        text-align:left;
+        border-right: none;
+        border-bottom: 2px solid var(--green-dark);
+        padding-bottom: 0.25rem;
+        padding-right: 0;
+       }
+   }
+
+.modal .benefits-grid{
+    grid-template-columns: 1fr;
+
+    .benefit{
+        max-width: 100%;
+    }
+}
+   
 }
