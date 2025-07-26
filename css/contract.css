@@ -330,6 +330,11 @@ margin-bottom:2rem;
 }
 
 @media screen and (max-width: 768px){
+    header {
+        margin: 0rem;
+        padding-top: 0.5rem; /* Añadido padding-top controlado para móviles */
+    }
+    
     .contract-form{
         min-width: 400px;
     }
@@ -354,6 +359,7 @@ margin-bottom:2rem;
 @media screen and (max-width: 480px){
     header{
         margin: 0rem;
+        padding-top: 0.25rem; /* Reducido aún más el padding-top en móviles pequeños */
     }
     .contract-form{
         min-width: unset;

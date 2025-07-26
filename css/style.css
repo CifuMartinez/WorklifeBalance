@@ -146,7 +146,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Mantenemos center para pantallas grandes */
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -272,7 +272,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Mantenemos center para pantallas grandes */
     text-align: center;
 }
 
@@ -657,6 +657,16 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 }
 
 @media screen and (max-width: 768px){
+    body {
+        justify-content: flex-start; /* Cambiado a flex-start para móviles */
+        padding-top: 1rem; /* Añadido padding-top controlado para móviles */
+    }
+    
+    main {
+        justify-content: flex-start; /* Cambiado a flex-start para móviles */
+        padding-top: 0.5rem; /* Añadido padding-top adicional para móviles */
+    }
+    
     header .logotipo {
         width: 250px; /* Ajusta este valor según sea necesario */
     }
@@ -700,7 +710,13 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 
     body{
         height: 95vh;
+        padding-top: 0.5rem; /* Reducido aún más el padding-top en móviles pequeños */
     }
+    
+    main {
+        padding-top: 0.25rem; /* Reducido aún más el padding-top en móviles pequeños */
+    }
+    
    p{
     font-size: 14px;
    }
