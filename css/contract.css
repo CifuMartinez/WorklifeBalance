@@ -333,10 +333,7 @@ input, select {
 }
 
 @media screen and (max-width: 768px){
-    header {
-        margin: 0rem;
-        padding-top: 3vh; /* Ya usando vh */
-    }
+
     
     .contract-form{
         min-width: 400px;
@@ -362,10 +359,6 @@ input, select {
 }
 
 @media screen and (max-width: 480px){
-    header{
-        margin: 0rem;
-        padding-top: 5vh; /* Ya usando vh */
-    }
     .contract-form{
         min-width: unset;
         width: calc(100% - 1rem);

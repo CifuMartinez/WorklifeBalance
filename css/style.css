@@ -657,15 +657,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 }
 
 @media screen and (max-width: 768px){
-    body {
-        justify-content: center; /* Mantenemos center para centrado vertical */
-        padding-top: 5vh; /* Usamos vh para espacio controlado desde arriba */
-    }
-    
-    main {
-        justify-content: center; /* Mantenemos center para centrado vertical */
-        padding-top: 2vh; /* Usamos vh para espacio adicional controlado */
-    }
+
     
     header .logotipo {
         width: 250px; /* Ajusta este valor según sea necesario */
@@ -709,9 +701,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 @media screen and (max-width: 480px){
 
     
-    main {
-        padding-top: 8vh; /* Usamos vh para espacio controlado en móviles pequeños */
-    }
+   
     
    p{
     font-size: 14px;
