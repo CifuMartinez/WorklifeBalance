@@ -135,7 +135,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh; /* Cambiado de 100% a 100vh */
     overflow: hidden; /* Deshabilita el scroll */
 }
 
@@ -268,7 +268,7 @@ header .claim {
 }
 
 main {
-    height: 100%; /* Asegura que el contenido principal ocupe el 100% del viewport */
+    height: 100vh; /* Cambiado de 100% a 100vh */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -435,7 +435,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Cambiado de 100% a 100vh */
     overflow: hidden; /* Oculta el desbordamiento */
     background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro */
     justify-content: center;
@@ -448,7 +448,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     margin: 0 auto;
     padding: 3rem 2rem;
     width: 75%;
-    max-height: 75%;
+    max-height: 75vh; /* Cambiado de 75% a 75vh */
     overflow-y: auto; /* Barra de desplazamiento */
     position: relative; /* Asegura que los elementos hijos con posición absoluta se posicionen relativamente a este contenedor */
     border-radius: 8px;
@@ -658,13 +658,13 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 
 @media screen and (max-width: 768px){
     body {
-        justify-content: flex-start; /* Cambiado a flex-start para móviles */
-        padding-top: 1rem; /* Añadido padding-top controlado para móviles */
+        justify-content: center; /* Mantenemos center para centrado vertical */
+        padding-top: 5vh; /* Usamos vh para espacio controlado desde arriba */
     }
     
     main {
-        justify-content: flex-start; /* Cambiado a flex-start para móviles */
-        padding-top: 0.5rem; /* Añadido padding-top adicional para móviles */
+        justify-content: center; /* Mantenemos center para centrado vertical */
+        padding-top: 2vh; /* Usamos vh para espacio adicional controlado */
     }
     
     header .logotipo {
@@ -708,13 +708,9 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 
 @media screen and (max-width: 480px){
 
-    body{
-        height: 95vh;
-        padding-top: 0.5rem; /* Reducido aún más el padding-top en móviles pequeños */
-    }
     
     main {
-        padding-top: 0.25rem; /* Reducido aún más el padding-top en móviles pequeños */
+        padding-top: 8vh; /* Usamos vh para espacio controlado en móviles pequeños */
     }
     
    p{
