@@ -451,14 +451,20 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     margin: 0 auto;
     padding: 3rem 2rem;
     width: 75%;
-    max-height: 75vh; /* Cambiado de 75% a 75vh */
-    overflow-y: auto; /* Barra de desplazamiento */
-    position: relative; /* Asegura que los elementos hijos con posición absoluta se posicionen relativamente a este contenedor */
+    max-height: 75vh;
+    min-height: 50vh;
+    min-height: 50dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mejorar la visibilidad */
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: var(--green-dark) var(--white); /* Firefox */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scrollbar-width: thin;
+    scrollbar-color: var(--green-dark) var(--white);
     opacity: 0;
     transform: scale(0.85);
     transition: opacity 0.3s, transform 0.3s;
