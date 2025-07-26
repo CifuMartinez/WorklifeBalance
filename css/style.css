@@ -153,7 +153,7 @@ body {
 }
 
 header{
-    margin-bottom:2rem;
+    margin-bottom:1rem;
 }
 header img {
     display: block;
@@ -674,6 +674,15 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     a{
         font-size: 18px;
     }
+
+    .contract-interactive{
+        margin-top: 1rem;
+    }
+
+    button.group-button{
+        margin-top: 1rem;
+    }
+    
     .contract-section p{
         max-width: 70%;
     }
