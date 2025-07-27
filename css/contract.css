@@ -9,6 +9,9 @@
     padding-right:3rem;
     text-transform:uppercase;
     margin-bottom:0.5rem;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Sección izquierda: Foto */
@@ -300,7 +303,9 @@ input, select {
         min-width: 600px;
         padding-right: 0;
         margin-bottom: 2rem;
-        min-height: 70vh; /* Añadido min-height con vh para tablets */
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
     }
 
     .form-left {
@@ -333,11 +338,15 @@ input, select {
 }
 
 @media screen and (max-width: 768px){
-
-    
+    header {
+        margin: 0rem;
+        /* Sin padding-top */
+    }
     .contract-form{
         min-width: 400px;
-        min-height: 60vh; /* Añadido min-height con vh para móviles */
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
     }
 
     .form-header{
@@ -359,12 +368,18 @@ input, select {
 }
 
 @media screen and (max-width: 480px){
+    header{
+        margin: 0rem;
+        /* Sin padding-top */
+    }
     .contract-form{
         min-width: unset;
         width: calc(100% - 1rem);
         margin: 1rem;
         padding: 0.5rem 0.25rem;
-        min-height: 50vh; /* Añadido min-height con vh para móviles pequeños */
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
     }
     
     .form-right {
