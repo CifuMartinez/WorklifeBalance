@@ -404,7 +404,7 @@ input, select {
         align-items: center;
 
         .naming-form{
-            display: none;
+            display: block; /* Cambiado de none a block para que se muestre en móviles */
         }
         .claim-clean{
             width:250px;
