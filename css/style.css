@@ -559,7 +559,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     display: flex;
     gap: 2rem;
     align-items: center;
-    margin: 2rem 1rem;
+    margin: 1rem;
 }
 
 .modal .flex-row .left {
@@ -569,6 +569,7 @@ button.group-button.continue-arrow:hover .icon img:last-child {
     border-right: 2px solid var(--green-dark);
     padding-right: 1rem;
     margin-left: 0;
+    margin-bottom: 0rem;
 }
 
 .modal .flex-row .right {
@@ -662,6 +663,15 @@ button.group-button.continue-arrow:hover .icon img:last-child {
         width: 75%;
         max-height: 75%;
     }
+
+    button{
+        font-size: 16px;
+        margin-top: 1rem;
+    }
+
+    .sign-in{
+        max-width:159px;
+    }   
 }
 
 @media screen and (max-width: 768px){
@@ -680,6 +690,11 @@ button.group-button.continue-arrow:hover .icon img:last-child {
 
     h2{
         font-size: 18px;
+    }
+
+    h2.subrayado{
+        font-size: 16px;
+        line-height: 1.2rem;
     }
     h3{
         font-size: 20px;

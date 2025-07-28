@@ -3,32 +3,31 @@
     background-color: var(--white);
     border-radius: 10px;
     min-width: 800px;
-    width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     gap: 20px;
-    padding-right:3rem;
-    text-transform:uppercase;
-    margin-bottom:0.5rem;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+    padding-right: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    /* Eliminado min-height: 100vh para que no ocupe toda la pantalla */
+    /* Eliminado align-items: center y justify-content: center */
 }
 
 /* Sección izquierda: Foto */
 .form-left {
     flex: 1;
-    position:relative;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--green-light);
-    min-width:250px;
+    min-width: 250px;
     border-radius: 10px;
+    height: 400px; /* Altura fija más apropiada */
 }
 
 .photo-placeholder {
     width: 100%;
-    height: 100vh; /* Ya cambiado de 100% a 100vh */
+    height: 100%; /* Cambiado de 100vh a 100% para que se ajuste al contenedor */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -43,7 +42,7 @@
 
 .photo-placeholder img.uploaded-photo {
     width: 100%;
-    height: 100vh; /* Ya cambiado de 100% a 100vh */
+    height: 100%; /* Cambiado de 100vh a 100% */
     object-fit: cover;
     border-radius: 6px;
 }
@@ -112,12 +111,12 @@
 .photo-loaded {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ya cambiado de 100% a 100vh */
+    height: 100%; /* Cambiado de 100vh a 100% */
 }
 
 .uploaded-image {
     width: 100%;
-    height: 100vh; /* Ya cambiado de 100% a 100vh */
+    height: 100%; /* Cambiado de 100vh a 100% */
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -132,7 +131,7 @@
     gap: 0.75rem;
     padding: 2rem 2rem 2rem 1.5rem;
     font-size: 18px;
-    min-height: 80vh; /* Añadido min-height con vh para mejor control */
+    /* Eliminado min-height: 80vh para que no ocupe toda la pantalla */
 }
 
 /* Primera fila: Isotipo, titular y claim */
@@ -303,9 +302,8 @@ input, select {
         min-width: 600px;
         padding-right: 0;
         margin-bottom: 2rem;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
+        /* Eliminado min-height: 100vh */
+        /* Eliminado align-items: center y justify-content: center */
     }
 
     .form-left {
@@ -315,7 +313,7 @@ input, select {
     .form-right {
         flex: 1;
         padding: 1.5rem;
-        min-height: 70vh; /* Ajustado min-height con vh para tablets */
+        /* Eliminado min-height: 70vh */
     }
 
     .naming-form {
@@ -344,9 +342,8 @@ input, select {
     }
     .contract-form{
         min-width: 400px;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
+        /* Eliminado min-height: 100vh */
+        /* Eliminado align-items: center y justify-content: center */
     }
 
     .form-header{
@@ -358,7 +355,7 @@ input, select {
         padding: 1rem;
         width: 100%;
         box-sizing: border-box;
-        min-height: 60vh; /* Ajustado min-height con vh para móviles */
+        /* Eliminado min-height: 60vh */
     }
 
     .fill-form {
@@ -374,17 +371,16 @@ input, select {
     }
     .contract-form{
         min-width: unset;
-        width: calc(100% - 1rem);
+        width: calc(90% - 1rem);
         margin: 1rem;
         padding: 0.5rem 0.25rem;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
+        /* Eliminado min-height: 60vh */
+        /* Eliminado align-items: center y justify-content: center */
     }
     
     .form-right {
         padding: 0.75rem 0.5rem;
-        min-height: 50vh; /* Ajustado min-height con vh para móviles pequeños */
+        /* Eliminado min-height: 50vh */
     }
 
     .fill-form {
