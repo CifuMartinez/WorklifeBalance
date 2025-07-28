@@ -1,17 +1,40 @@
 main{
-    min-height: 90vh;
-    min-height: 90dvh;
+    height: 90vh;
+    height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+    overflow: hidden;
 }
 
 .platform-page {
     background-color: var(--dark);
     color: var(--white);
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 2rem;
+    overflow: hidden;
 }
 
 .platform-container {
     padding:3rem;
     justify-content: space-between;
     max-width: 2000px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .head-container {
