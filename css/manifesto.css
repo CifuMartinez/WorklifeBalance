@@ -418,6 +418,7 @@ header .title img {
 
     .back-page {
         padding-top: 1rem;
+        margin-bottom: 2rem;
         top: 1rem;
         left: 1rem;
         display: flex;
