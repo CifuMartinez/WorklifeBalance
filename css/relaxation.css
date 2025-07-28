@@ -182,13 +182,13 @@ button{
 /* Animaciones de movimiento flotante */
 @keyframes floatingButtonHappiness {
     0% {
-        transform: translate(-210px,-175px) translate(-50%, -50%);
+        transform: translate(-210px,-175px) translate(-165%, 150%);
     }
     50% {
-        transform: translate(-210px,-185px) translate(-50%, -50%);
+        transform: translate(-210px,-185px) translate(-165%, 150%);
     }
     100% {
-        transform: translate(-210px,-175px) translate(-50%, -50%);
+        transform: translate(-210px,-175px) translate(-165%, 150%);
     }
 }
 
@@ -281,7 +281,7 @@ button{
 /* Estado activo - detiene la animación y mantiene la posición */
 .circle-button.active:nth-child(1) {
     animation: none;
-    transform: translate(-210px,-175px) translate(-50%, -50%);
+    transform: translate(-210px,-175px) translate(-165%, 150%);
 }
 
 .circle-button.active:nth-child(2) {
@@ -564,16 +564,19 @@ button{
     /* Ajuste de posiciones de los botones para escala 0.8 */
     @keyframes floatingButtonHappiness {
         0% {
-            transform: translate(-168px,-140px) translate(-50%, -50%);
+            transform: translate(-168px,-140px) translate(-100%, 60%);
         }
         50% {
-            transform: translate(-168px,-148px) translate(-50%, -50%);
+            transform: translate(-168px,-148px) translate(-100%, 60%);
         }
         100% {
-            transform: translate(-168px,-140px) translate(-50%, -50%);
+            transform: translate(-168px,-140px) translate(-100%, 60%);
         }
     }
-
+    .circle-button.active:nth-child(1) {
+        animation: none;
+        transform: translate(-168px,-140px) translate(-100%, 60%);
+    }
     @keyframes floatingButtonHobby {
         0% {
             transform: translate(-100px, 100px) translate(-50%, -50%);
@@ -585,7 +588,10 @@ button{
             transform: translate(-100px, 100px) translate(-50%, -50%);
         }
     }
-
+    .circle-button.active:nth-child(2) {
+        animation: none;
+        transform: translate(-100px, 100px) translate(-50%, -50%);
+    }
     @keyframes floatingButtonBehavior {
         0% {
             transform: translate(60px,126px) translate(-50%, -50%);
@@ -597,56 +603,44 @@ button{
             transform: translate(60px,126px) translate(-50%, -50%);
         }
     }
-
-    @keyframes floatingButtonSocial {
-        0% {
-            transform: translate(-70px, 300px) translate(-50%, -50%);
-        }
-        50% {
-            transform: translate(-70px, 292px) translate(-50%, -50%);
-        }
-        100% {
-            transform: translate(-70px, 300px) translate(-50%, -50%);
-        }
-    }
-
-    @keyframes floatingButtonSentimental {
-        0% {
-            transform: translate(40px,-220px) translate(-50%, -50%);
-        }
-        50% {
-            transform: translate(40px,-212px) translate(-50%, -50%);
-        }
-        100% {
-            transform: translate(40px,-220px) translate(-50%, -50%);
-        }
-    }
-
-    /* Estado activo - detiene la animación y mantiene la posición */
-    .circle-button.active:nth-child(1) {
-        animation: none;
-        transform: translate(-168px,-140px) translate(-50%, -50%);
-    }
-
-    .circle-button.active:nth-child(2) {
-        animation: none;
-        transform: translate(-100px, 100px) translate(-50%, -50%);
-    }
-
     .circle-button.active:nth-child(3) {
         animation: none;
         transform: translate(60px,126px) translate(-50%, -50%);
     }
-
+    @keyframes floatingButtonSocial {
+        0% {
+            transform: translate(-70px, 300px) translate(150%, -200%);
+        }
+        50% {
+            transform: translate(-70px, 292px) translate(150%, -200%);
+        }
+        100% {
+            transform: translate(-70px, 300px) translate(150%, -200%);
+        }
+    }
     .circle-button.active:nth-child(4) {
         animation: none;
-        transform: translate(-70px, 300px) translate(-50%, -50%);
+        transform: translate(-70px, 300px) translate(150%, -200%);
+    }
+
+    @keyframes floatingButtonSentimental {
+        0% {
+            transform: translate(40px,-220px) translate(-20%, 150%);
+        }
+        50% {
+            transform: translate(40px,-212px) translate(-20%, 150%);
+        }
+        100% {
+            transform: translate(40px,-220px) translate(-20%, 150%);
+        }
     }
 
     .circle-button.active:nth-child(5) {
         animation: none;
-        transform: translate(40px,-220px) translate(-50%, -50%);
+        transform: translate(40px,-220px) translate(-20%, 150%);
     }
+    
+
 
     .circle{
         width: 35px;
@@ -678,10 +672,13 @@ button{
 
 @media screen and (max-width: 480px) {
 
-    .header-content{
-        padding-top: 5rem;
-    }
-
+   .relaxation-container{
+    padding: 0rem;
+   }
+    
+   .orbital-system{
+    transform:scale(0.6);
+   }
     h1{
         font-size: 6vw;
     }
@@ -762,89 +759,81 @@ button{
     /* Ajuste de posiciones de los botones para escala 0.8 */
     @keyframes floatingButtonHappiness {
         0% {
-            transform: translate(-120px,-190px) translate(-50%, -50%);
+            transform: translate(-120px,-190px) translate(-100%, 120%);
         }
         50% {
-            transform: translate(-120px,-182px) translate(-50%, -50%);
+            transform: translate(-120px,-182px) translate(-100%, 120%);
         }
         100% {
-            transform: translate(-120px,-190px) translate(-50%, -50%);
+            transform: translate(-120px,-190px) translate(-100%, 120%);
         }
     }
-
+    .circle-button.active:nth-child(1) {
+        animation: none;
+        transform: translate(-120px,-190px) translate(-100%, 120%);
+    }
     @keyframes floatingButtonHobby {
         0% {
-            transform: translate(-100px, 100px) translate(-50%, -50%);
+            transform: translate(-100px, 100px) translate(-95%, -50%);
         }
         50% {
-            transform: translate(-100px, 92px) translate(-50%, -50%);
+            transform: translate(-100px, 92px) translate(-95%, -50%);
         }
         100% {
-            transform: translate(-100px, 100px) translate(-50%, -50%);
+            transform: translate(-100px, 100px) translate(-95%, -50%);
         }
     }
-
+    .circle-button.active:nth-child(2) {
+        animation: none;
+        transform: translate(-100px, 100px) translate(-95%, -50%);
+    }
     @keyframes floatingButtonBehavior {
         0% {
-            transform: translate(0px,224px) translate(-50%, -50%);
+            transform: translate(0px,224px) translate(-50%, -150%);
         }
         50% {
-            transform: translate(0px,216px) translate(-50%, -50%);
+            transform: translate(0px,216px) translate(-50%, -150%);
         }
         100% {
-            transform: translate(0px,224px) translate(-50%, -50%);
+            transform: translate(0px,224px) translate(-50%, -150%);
         }
+    }
+    .circle-button.active:nth-child(3) {
+        animation: none;
+        transform: translate(0px,224px) translate(-50%, -150%);
     }
 
     @keyframes floatingButtonSocial {
         0% {
-            transform: translate(-70px, 300px) translate(-50%, -50%);
+            transform: translate(-70px, 300px) translate(150%, -450%);
         }
         50% {
-            transform: translate(-70px, 292px) translate(-50%, -50%);
+            transform: translate(-70px, 292px) translate(150%, -450%);
         }
         100% {
-            transform: translate(-70px, 300px) translate(-50%, -50%);
+            transform: translate(-70px, 300px) translate(150%, -450%);
         }
     }
-
-    @keyframes floatingButtonSentimental {
-        0% {
-            transform: translate(0px,-138px) translate(-50%, -50%);
-        }
-        50% {
-            transform: translate(0px,-132px) translate(-50%, -50%);
-        }
-        100% {
-            transform: translate(0px,-138px) translate(-50%, -50%);
-        }
-    }
-
-    /* Estado activo - detiene la animación y mantiene la posición */
-    .circle-button.active:nth-child(1) {
-        animation: none;
-        transform: translate(-120px,-190px) translate(-50%, -50%);
-    }
-
-    .circle-button.active:nth-child(2) {
-        animation: none;
-        transform: translate(-100px, 100px) translate(-50%, -50%);
-    }
-
-    .circle-button.active:nth-child(3) {
-        animation: none;
-        transform: translate(0px,224px) translate(-50%, -50%);
-    }
-
     .circle-button.active:nth-child(4) {
         animation: none;
-        transform: translate(-70px, 300px) translate(-50%, -50%);
+        transform: translate(-70px, 300px) translate(150%, -450%);
+    }
+    @keyframes floatingButtonSentimental {
+        0% {
+            transform: translate(0px,-138px) translate(-50%, -100%);
+        }
+        50% {
+            transform: translate(0px,-132px) translate(-50%, -100%);
+        }
+        100% {
+            transform: translate(0px,-138px) translate(-50%, -100%);
+        }
     }
 
     .circle-button.active:nth-child(5) {
         animation: none;
-        transform: translate(0px,-138px) translate(-50%, -50%);
-    }
+        transform: translate(0px,-138px) translate(-50%, -100%);
+    }   
 
     .team-label{
         font-size: 16px;
