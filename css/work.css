@@ -728,18 +728,21 @@ button{
     .badges-earned{
         padding-top: 1rem;
     }
+    .desk-section{
+        margin-bottom: 2rem;
+    }   
     .timer-container.desktop{
         display: none;
     }
     .timer-container-phone{
-        display: flex;
-        justify-content: center;
+        display: none;
+        /* justify-content: center;
         align-items: center;
         gap:1rem;
         padding-bottom: 1rem;
         h3.time{
             margin:0;
-        }
+        } */
     }
     #clock-animation-mobile{
         width: 3.5rem;
@@ -766,7 +769,7 @@ button{
         margin-inline:1rem;
     }
     .back-page{
-        left: 15%;
+        left: 20%;
     }
 
 }
