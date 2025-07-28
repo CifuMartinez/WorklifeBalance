@@ -36,7 +36,6 @@ header .title img {
 
 /* Back button styles */
 .back-page {
-    padding-top: 2rem;
     top: 2rem;
     left: 2rem;
     display: flex;
