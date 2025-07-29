@@ -119,6 +119,13 @@ document.addEventListener('keydown', (e) => {
 
 // Eventos táctiles para desplazamiento
 viewport.addEventListener('touchstart', (e) => {
+  // Solo manejar el desplazamiento si no se está tocando un elemento interactivo
+  const target = e.target;
+  if (target.classList.contains('symbol-shape') && target.classList.contains('disruptive')) {
+    // Permitir que el click del elemento disruptivo funcione
+    return;
+  }
+  
   e.preventDefault();
   isDragging = true;
   startX = e.touches[0].clientX;
@@ -135,13 +142,27 @@ viewport.addEventListener('touchmove', (e) => {
   const deltaX = touch.clientX - startX;
   const deltaY = touch.clientY - startY;
   
-  posX = Math.max(Math.min(lastX + deltaX, 0), maxX);
-  posY = Math.max(Math.min(lastY + deltaY, 0), maxY);
-  
-  updateContainerPosition();
+  // Solo mover si el desplazamiento es significativo (más de 10px)
+  if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) {
+    posX = Math.max(Math.min(lastX + deltaX, 0), maxX);
+    posY = Math.max(Math.min(lastY + deltaY, 0), maxY);
+    updateContainerPosition();
+  }
 }, { passive: false });
 
 viewport.addEventListener('touchend', (e) => {
+  if (!isDragging) return;
+  
+  // Solo considerar como desplazamiento si se movió significativamente
+  const touch = e.changedTouches[0];
+  const deltaX = touch.clientX - startX;
+  const deltaY = touch.clientY - startY;
+  
+  if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) {
+    // Fue un desplazamiento, no un click
+    e.preventDefault();
+  }
+  
   isDragging = false;
 }, { passive: false });
 
