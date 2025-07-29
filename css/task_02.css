@@ -150,7 +150,10 @@
 
   .hierarchy-task{
     margin: 0.5rem 0rem;
-    padding: 1rem;
+    padding: 0.5rem;
+  }
+  .dropzone{
+    min-height: 1rem;
   }
   .draggables-container{
     gap: 0.5rem;
@@ -161,6 +164,9 @@
   h1.caja.hierarchy-title{
     font-size: 18px;
   }
+  .hierarchy-title{
+    margin-bottom: 0.5rem;
+  }
   .hierarchy-list{
     display: flex;
     flex-direction: column;
@@ -169,6 +175,7 @@
   }
   .hierarchy-item{
     width:300px;
+    margin-bottom: 0.75rem;
   }
   .draggable-container{
     margin-bottom: 1rem;
