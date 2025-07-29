@@ -21,8 +21,11 @@ while (disruptivePositions.size < disruptiveCount) {
 const container = document.getElementById('symbol-system');
 const viewport = document.querySelector('.symbol-system-viewport');
 
-// Parámetros de tamaño según el CSS
-const cellSize = 40; // tamaño de celda (grid)
+// Detectar si es pantalla pequeña
+const isSmallScreen = window.innerWidth <= 480;
+
+// Parámetros de tamaño según el CSS y pantalla
+const cellSize = isSmallScreen ? 25 : 40; // tamaño de celda reducido para móviles
 const gap = 4;       // gap entre celdas
 
 // Cálculo del tamaño real del grid
@@ -39,6 +42,11 @@ const maxY = Math.min(0, viewportHeight - gridHeight);
 
 let posX = 0, posY = 0;
 const step = cellSize + gap;
+
+// Variables para el soporte táctil
+let isDragging = false;
+let startX = 0, startY = 0;
+let lastX = 0, lastY = 0;
 
 let disruptivesLeft = disruptiveCount;
 
@@ -93,15 +101,49 @@ for (let i = 0; i < totalRows * totalCols; i++) {
   container.appendChild(div);
 }
 
+// Función para actualizar la posición del contenedor
+function updateContainerPosition() {
+  container.style.left = posX + 'px';
+  container.style.top = posY + 'px';
+  updateCounterVisibility();
+}
+
+// Eventos de teclado
 document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') posX = Math.max(posX - step, maxX);
   if (e.key === 'ArrowLeft')  posX = Math.min(posX + step, 0);
   if (e.key === 'ArrowDown')  posY = Math.max(posY - step, maxY);
   if (e.key === 'ArrowUp')    posY = Math.min(posY + step, 0);
-  container.style.left = posX + 'px';
-  container.style.top = posY + 'px';
-  updateCounterVisibility();
+  updateContainerPosition();
 });
+
+// Eventos táctiles para desplazamiento
+viewport.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+  lastX = posX;
+  lastY = posY;
+}, { passive: false });
+
+viewport.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  
+  const touch = e.touches[0];
+  const deltaX = touch.clientX - startX;
+  const deltaY = touch.clientY - startY;
+  
+  posX = Math.max(Math.min(lastX + deltaX, 0), maxX);
+  posY = Math.max(Math.min(lastY + deltaY, 0), maxY);
+  
+  updateContainerPosition();
+}, { passive: false });
+
+viewport.addEventListener('touchend', (e) => {
+  isDragging = false;
+}, { passive: false });
 
 // Para swipe en móvil, usa eventos touchstart/touchmove/touchend
 
@@ -120,9 +162,7 @@ viewport.addEventListener('wheel', function(e) {
     posY = Math.max(Math.min(posY - e.deltaY, 0), maxY);
   }
 
-  container.style.left = posX + 'px';
-  container.style.top = posY + 'px';
-  updateCounterVisibility();
+  updateContainerPosition();
 }, { passive: false });
 
 // Crear el contador flotante
