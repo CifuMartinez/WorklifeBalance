@@ -171,11 +171,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   .hierarchy-item{
     width:300px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
   .draggable-container{
     margin-bottom: 1rem;
