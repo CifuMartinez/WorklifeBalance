@@ -281,6 +281,19 @@ button.group-button:hover .info-icon img{
    
 }
 
+@media (max-width:480px){
+    button.group-button .info-icon{
+       
+        width: 24px;
+        height: 24px;
+     }
+     
+     button.group-button .info-icon img{
+         width: 14px;
+         height: 14px;
+         transition: transform 0.4s ease-in-out;
+     }
+}
 @media (max-width: 400px) {
     .task-title{
         font-size:18px;
