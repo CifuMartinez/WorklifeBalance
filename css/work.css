@@ -476,7 +476,7 @@ button{
 
     .back-page{
         top: 1rem;
-        left: 50%;
+        left: 15%;
         transform: translate(-50%,0) scale(1);
         transition: all 0.3s ease-in-out;
     }
